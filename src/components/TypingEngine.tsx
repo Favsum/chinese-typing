@@ -219,9 +219,9 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
                     className={`relative w-6 h-8 flex items-center justify-center text-lg transition-colors duration-75 ${bgColor} ${charColor}`}
                   >
                     {userChar}
-                    {/* Blinking Cursor - Underline style or vertical bar */}
+                    {/* Blinking Cursor - Used standard css class .cursor-blink from index.html instead of tailwind arbitrary value */}
                     {isCurrent && isFocused && (
-                        <div className="absolute bottom-1 w-5 h-0.5 bg-indigo-500 animate-[blink_1s_step-end_infinite]"></div>
+                        <div className="absolute bottom-1 w-5 h-0.5 bg-indigo-500 cursor-blink"></div>
                     )}
                   </div>
                </div>

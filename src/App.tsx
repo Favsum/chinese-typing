@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { GameStatus, type TypingStats, type CourseItem, type Course } from './types';
 import { COURSES, parseContent, fetchExternalCourses } from './services/courseService';
 import { TypingEngine } from './components/TypingEngine';
 import { ResultsModal } from './components/ResultsModal';
-import { Keyboard, BookOpen, Upload } from 'lucide-react';
+import { Keyboard, BookOpen, Upload, Loader2 } from 'lucide-react';
 
 const App: React.FC = () => {
   // Game State
@@ -12,8 +12,10 @@ const App: React.FC = () => {
   const [currentCourseItems, setCurrentCourseItems] = useState<CourseItem[]>([]);
   
   // Settings
-  const [selectedCourseId, setSelectedCourseId] = useState<string>(COURSES[0].id);
+  // Initial state is empty since we load everything from files now
+  const [selectedCourseId, setSelectedCourseId] = useState<string>('');
   const [resetCount, setResetCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   
   // Custom Courses State (User Uploads)
   const [customCourses, setCustomCourses] = useState<Course[]>([]);
@@ -21,8 +23,12 @@ const App: React.FC = () => {
   // External Courses State (Fetched from server/folder)
   const [externalCourses, setExternalCourses] = useState<Course[]>([]);
 
-  // Combined Courses: Built-in + External (Server) + Custom (Upload)
-  const allCourses = [...COURSES, ...externalCourses, ...customCourses];
+  // Combined Courses: Built-in (Empty now) + External (Server) + Custom (Upload)
+  // Fix: Use useMemo to prevent infinite loop. Without useMemo, this creates a new array on every render,
+  // which causes loadCourse to change, which triggers the useEffect below, which triggers a re-render.
+  const allCourses = useMemo(() => {
+    return [...COURSES, ...externalCourses, ...customCourses];
+  }, [externalCourses, customCourses]);
 
   // Stats
   const [stats, setStats] = useState<TypingStats>({
@@ -40,15 +46,21 @@ const App: React.FC = () => {
 
   // Load external courses on mount
   useEffect(() => {
+    setIsLoading(true);
     fetchExternalCourses().then(courses => {
         if (courses.length > 0) {
             setExternalCourses(courses);
+            // Automatically select the first course if none selected
+            setSelectedCourseId(courses[0].id);
         }
+        setIsLoading(false);
     });
   }, []);
 
   // Load course text
   const loadCourse = useCallback(() => {
+    if (!selectedCourseId) return;
+
     setGameStatus(GameStatus.IDLE);
     setStats({
       wpm: 0,
@@ -64,7 +76,7 @@ const App: React.FC = () => {
     if (course) {
       setCurrentCourseItems(course.items);
     }
-  }, [selectedCourseId, customCourses, externalCourses]); 
+  }, [selectedCourseId, allCourses]); 
 
   useEffect(() => {
     loadCourse();
@@ -148,17 +160,26 @@ const App: React.FC = () => {
           <div className="flex items-center gap-2">
               <div className="flex items-center gap-2 bg-slate-100 rounded-lg px-3 py-1.5">
                   <BookOpen size={16} className="text-slate-500"/>
-                  <select 
-                    value={selectedCourseId}
-                    onChange={(e) => setSelectedCourseId(e.target.value)}
-                    className="bg-transparent border-none text-sm font-medium text-slate-700 outline-none focus:ring-0 cursor-pointer w-32 md:w-48"
-                  >
-                    {allCourses.map(c => (
-                        <option key={c.id} value={c.id}>
-                            {c.name}
-                        </option>
-                    ))}
-                  </select>
+                  {isLoading ? (
+                    <div className="flex items-center gap-2 px-2 text-sm text-slate-500">
+                       <Loader2 size={14} className="animate-spin" />
+                       <span>加载课程中...</span>
+                    </div>
+                  ) : (
+                    <select 
+                        value={selectedCourseId}
+                        onChange={(e) => setSelectedCourseId(e.target.value)}
+                        className="bg-transparent border-none text-sm font-medium text-slate-700 outline-none focus:ring-0 cursor-pointer w-32 md:w-48"
+                        disabled={allCourses.length === 0}
+                    >
+                        {allCourses.length === 0 && <option>无可用课程</option>}
+                        {allCourses.map(c => (
+                            <option key={c.id} value={c.id}>
+                                {c.name}
+                            </option>
+                        ))}
+                    </select>
+                  )}
               </div>
 
               <input 
@@ -221,15 +242,21 @@ const App: React.FC = () => {
         {/* Game Area */}
         <div className="flex-1">
            {/* Key includes resetCount to completely destroy and recreate component on reset */}
-           <TypingEngine 
-              key={`${selectedCourseId}-${resetCount}`}
-              courseItems={currentCourseItems}
-              gameStatus={gameStatus}
-              onStart={handleStart}
-              onFinish={handleFinish}
-              onRestart={handleRestart}
-              setStats={setStats}
-           />
+           {currentCourseItems.length > 0 ? (
+               <TypingEngine 
+                  key={`${selectedCourseId}-${resetCount}`}
+                  courseItems={currentCourseItems}
+                  gameStatus={gameStatus}
+                  onStart={handleStart}
+                  onFinish={handleFinish}
+                  onRestart={handleRestart}
+                  setStats={setStats}
+               />
+           ) : (
+               <div className="flex items-center justify-center h-64 text-slate-400">
+                   {isLoading ? "加载中..." : "请选择一个课程开始练习"}
+               </div>
+           )}
         </div>
       </main>
 
