@@ -1,5 +1,5 @@
 
-import type{ Course, CourseItem } from '../types';
+import { Course, CourseItem } from '../types';
 
 // Content from courses/output_part_1.txt
 const COURSE_1_CONTENT = `我们	wo3'men
