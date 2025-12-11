@@ -1,7 +1,7 @@
 
 import React from 'react';
 import type { TypingStats } from '../types';
-import { X, Trophy, Target, Clock, Zap } from 'lucide-react';
+import { X, Trophy, Target, Clock, Zap, ArrowRight, RefreshCw } from 'lucide-react';
 import {
   BarChart,
   Bar,
@@ -17,15 +17,27 @@ interface ResultsModalProps {
   isOpen: boolean;
   onClose: () => void;
   stats: TypingStats;
+  hasNextCourse: boolean;
+  onNextCourse: () => void;
 }
 
-export const ResultsModal: React.FC<ResultsModalProps> = ({ isOpen, onClose, stats }) => {
+export const ResultsModal: React.FC<ResultsModalProps> = ({ 
+  isOpen, 
+  onClose, 
+  stats, 
+  hasNextCourse, 
+  onNextCourse 
+}) => {
   if (!isOpen) return null;
 
   const data = [
     { name: '正确', value: stats.correctChars, color: '#10b981' },
     { name: '错误', value: stats.errors, color: '#f43f5e' },
   ];
+  
+  const minutes = Math.floor(stats.timeElapsed / 60);
+  const seconds = stats.timeElapsed % 60;
+  const timeString = minutes > 0 ? `${minutes}分${seconds}秒` : `${seconds}秒`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animate-in fade-in duration-200">
@@ -72,7 +84,7 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({ isOpen, onClose, sta
                 <Clock size={16} />
                 <span className="text-xs font-semibold uppercase tracking-wider">用时</span>
               </div>
-              <div className="text-3xl font-bold text-slate-800">{stats.timeElapsed}s</div>
+              <div className="text-3xl font-bold text-slate-800">{timeString}</div>
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center">
@@ -104,10 +116,20 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({ isOpen, onClose, sta
           </div>
 
           <button
-            onClick={onClose}
-            className="w-full py-3.5 text-white font-medium bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-200 focus:ring-4 focus:ring-indigo-100"
+            onClick={hasNextCourse ? onNextCourse : onClose}
+            className="w-full py-3.5 text-white font-medium bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-200 focus:ring-4 focus:ring-indigo-100 flex items-center justify-center gap-2"
           >
-            开始新练习
+            {hasNextCourse ? (
+               <>
+                 <span>开始下一课程</span>
+                 <ArrowRight size={18} />
+               </>
+            ) : (
+               <>
+                 <span>再练一次</span>
+                 <RefreshCw size={18} />
+               </>
+            )}
           </button>
         </div>
 

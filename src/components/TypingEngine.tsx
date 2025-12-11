@@ -153,6 +153,12 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
     if (!isComposing.current) {
         setCommittedValue(val);
         processGameLogic(val);
+        
+        // Fix: Force cursor to the end of input.
+        // This solves the issue where auto-completed right brackets cannot be deleted 
+        // because the cursor is stuck in the middle (e.g., "|）").
+        // By moving cursor to end, Backspace will always delete the last character.
+        e.target.setSelectionRange(val.length, val.length);
     }
   };
 
@@ -166,6 +172,8 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
     setInputValue(val); 
     setCommittedValue(val);
     processGameLogic(val);
+    // Also force cursor to end after composition
+    (e.target as HTMLInputElement).setSelectionRange(val.length, val.length);
   };
 
   // --- Rendering ---

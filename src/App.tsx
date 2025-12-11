@@ -144,6 +144,21 @@ const App: React.FC = () => {
     }
   };
 
+  // Logic for Next Course
+  const currentCourseIndex = allCourses.findIndex(c => c.id === selectedCourseId);
+  const hasNextCourse = currentCourseIndex !== -1 && currentCourseIndex < allCourses.length - 1;
+
+  const handleNextCourse = () => {
+    if (hasNextCourse) {
+        // Changing the selectedId will trigger the useEffect, which calls loadCourse, 
+        // which resets the game and increments resetCount.
+        setSelectedCourseId(allCourses[currentCourseIndex + 1].id);
+        setShowResults(false);
+    } else {
+        handleModalClose();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col text-slate-800 font-sans">
       
@@ -264,6 +279,8 @@ const App: React.FC = () => {
         isOpen={showResults} 
         onClose={handleModalClose}
         stats={stats}
+        hasNextCourse={hasNextCourse}
+        onNextCourse={handleNextCourse}
       />
     </div>
   );
