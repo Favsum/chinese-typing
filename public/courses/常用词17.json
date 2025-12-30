@@ -1,0 +1,2002 @@
+[
+  {
+    "hanzi": "学士",
+    "pinyin": "xuéshì"
+  },
+  {
+    "hanzi": "照着",
+    "pinyin": "zhàozhe"
+  },
+  {
+    "hanzi": "邦交",
+    "pinyin": "bāngjiāo"
+  },
+  {
+    "hanzi": "不敌",
+    "pinyin": "bùdí"
+  },
+  {
+    "hanzi": "长短",
+    "pinyin": "chángduǎn"
+  },
+  {
+    "hanzi": "大象",
+    "pinyin": "dàxiàng"
+  },
+  {
+    "hanzi": "短波",
+    "pinyin": "duǎnbō"
+  },
+  {
+    "hanzi": "缴获",
+    "pinyin": "jiǎohuò"
+  },
+  {
+    "hanzi": "脉搏",
+    "pinyin": "màibó"
+  },
+  {
+    "hanzi": "盘子",
+    "pinyin": "pánzi"
+  },
+  {
+    "hanzi": "上交",
+    "pinyin": "shàngjiāo"
+  },
+  {
+    "hanzi": "投机",
+    "pinyin": "tóujī"
+  },
+  {
+    "hanzi": "毅力",
+    "pinyin": "yìlì"
+  },
+  {
+    "hanzi": "病虫害",
+    "pinyin": "bìngchónghài"
+  },
+  {
+    "hanzi": "对准",
+    "pinyin": "duìzhǔn"
+  },
+  {
+    "hanzi": "分级",
+    "pinyin": "fēnjí"
+  },
+  {
+    "hanzi": "公德",
+    "pinyin": "gōngdé"
+  },
+  {
+    "hanzi": "解剖",
+    "pinyin": "jiěpōu"
+  },
+  {
+    "hanzi": "炮兵",
+    "pinyin": "pàobīng"
+  },
+  {
+    "hanzi": "篇幅",
+    "pinyin": "piānfú"
+  },
+  {
+    "hanzi": "诗句",
+    "pinyin": "shījù"
+  },
+  {
+    "hanzi": "忘掉",
+    "pinyin": "wàngdiào"
+  },
+  {
+    "hanzi": "行政区",
+    "pinyin": "xíngzhèngqū"
+  },
+  {
+    "hanzi": "板凳",
+    "pinyin": "bǎndèng"
+  },
+  {
+    "hanzi": "过节",
+    "pinyin": "guòjié"
+  },
+  {
+    "hanzi": "好容易",
+    "pinyin": "hǎoróngyì"
+  },
+  {
+    "hanzi": "巨资",
+    "pinyin": "jùzī"
+  },
+  {
+    "hanzi": "首饰",
+    "pinyin": "shǒushi"
+  },
+  {
+    "hanzi": "掩护",
+    "pinyin": "yǎnhù"
+  },
+  {
+    "hanzi": "长子",
+    "pinyin": "zhǎngzǐ"
+  },
+  {
+    "hanzi": "只怕",
+    "pinyin": "zhǐpà"
+  },
+  {
+    "hanzi": "别扭",
+    "pinyin": "bièniu"
+  },
+  {
+    "hanzi": "杠杆",
+    "pinyin": "gànggǎn"
+  },
+  {
+    "hanzi": "高价",
+    "pinyin": "gāojià"
+  },
+  {
+    "hanzi": "侵入",
+    "pinyin": "qīnrù"
+  },
+  {
+    "hanzi": "坦诚",
+    "pinyin": "tǎnchéng"
+  },
+  {
+    "hanzi": "过早",
+    "pinyin": "guòzǎo"
+  },
+  {
+    "hanzi": "要不然",
+    "pinyin": "yàobùrán"
+  },
+  {
+    "hanzi": "何尝",
+    "pinyin": "hécháng"
+  },
+  {
+    "hanzi": "雷雨",
+    "pinyin": "léiyǔ"
+  },
+  {
+    "hanzi": "平坦",
+    "pinyin": "píngtǎn"
+  },
+  {
+    "hanzi": "伊斯兰教",
+    "pinyin": "yīsīlánjiào"
+  },
+  {
+    "hanzi": "有线电视",
+    "pinyin": "yǒuxiàndiànshì"
+  },
+  {
+    "hanzi": "肚皮",
+    "pinyin": "dùpí"
+  },
+  {
+    "hanzi": "愤慨",
+    "pinyin": "fènkǎi"
+  },
+  {
+    "hanzi": "可信",
+    "pinyin": "kěxìn"
+  },
+  {
+    "hanzi": "冷却",
+    "pinyin": "lěngquè"
+  },
+  {
+    "hanzi": "报到",
+    "pinyin": "bàodào"
+  },
+  {
+    "hanzi": "歌词",
+    "pinyin": "gēcí"
+  },
+  {
+    "hanzi": "张望",
+    "pinyin": "zhāngwàng"
+  },
+  {
+    "hanzi": "按摩",
+    "pinyin": "ànmó"
+  },
+  {
+    "hanzi": "颤动",
+    "pinyin": "chàndòng"
+  },
+  {
+    "hanzi": "根基",
+    "pinyin": "gēnjī"
+  },
+  {
+    "hanzi": "耕作",
+    "pinyin": "gēngzuò"
+  },
+  {
+    "hanzi": "管家",
+    "pinyin": "guǎnjiā"
+  },
+  {
+    "hanzi": "画像",
+    "pinyin": "huàxiàng"
+  },
+  {
+    "hanzi": "入库",
+    "pinyin": "rùkù"
+  },
+  {
+    "hanzi": "庄重",
+    "pinyin": "zhuāngzhòng"
+  },
+  {
+    "hanzi": "气流",
+    "pinyin": "qìliú"
+  },
+  {
+    "hanzi": "画展",
+    "pinyin": "huàzhǎn"
+  },
+  {
+    "hanzi": "开头",
+    "pinyin": "kāitóu"
+  },
+  {
+    "hanzi": "私利",
+    "pinyin": "sīlì"
+  },
+  {
+    "hanzi": "鞋子",
+    "pinyin": "xiézi"
+  },
+  {
+    "hanzi": "压倒",
+    "pinyin": "yādǎo"
+  },
+  {
+    "hanzi": "涌动",
+    "pinyin": "yǒngdòng"
+  },
+  {
+    "hanzi": "地势",
+    "pinyin": "dìshì"
+  },
+  {
+    "hanzi": "高空",
+    "pinyin": "gāokōng"
+  },
+  {
+    "hanzi": "驾车",
+    "pinyin": "jiàchē"
+  },
+  {
+    "hanzi": "姐夫",
+    "pinyin": "jiěfu"
+  },
+  {
+    "hanzi": "求职",
+    "pinyin": "qiúzhí"
+  },
+  {
+    "hanzi": "俗话说",
+    "pinyin": "súhuàshuō"
+  },
+  {
+    "hanzi": "印度洋",
+    "pinyin": "yìndùyáng"
+  },
+  {
+    "hanzi": "不可思议",
+    "pinyin": "bùkěsīyì"
+  },
+  {
+    "hanzi": "不作声",
+    "pinyin": "bùzuòshēng"
+  },
+  {
+    "hanzi": "河滩",
+    "pinyin": "hétān"
+  },
+  {
+    "hanzi": "奖惩",
+    "pinyin": "jiǎngchéng"
+  },
+  {
+    "hanzi": "精髓",
+    "pinyin": "jīngsuǐ"
+  },
+  {
+    "hanzi": "开关",
+    "pinyin": "kāiguān"
+  },
+  {
+    "hanzi": "喜事",
+    "pinyin": "xǐshì"
+  },
+  {
+    "hanzi": "新式",
+    "pinyin": "xīnshì"
+  },
+  {
+    "hanzi": "乘机",
+    "pinyin": "chéngjī"
+  },
+  {
+    "hanzi": "重温",
+    "pinyin": "chóngwēn"
+  },
+  {
+    "hanzi": "大西洋",
+    "pinyin": "dàxīyáng"
+  },
+  {
+    "hanzi": "地层",
+    "pinyin": "dìcéng"
+  },
+  {
+    "hanzi": "间断",
+    "pinyin": "jiànduàn"
+  },
+  {
+    "hanzi": "解体",
+    "pinyin": "jiětǐ"
+  },
+  {
+    "hanzi": "突如其来",
+    "pinyin": "tūrúqílái"
+  },
+  {
+    "hanzi": "着呢",
+    "pinyin": "zhene"
+  },
+  {
+    "hanzi": "主动权",
+    "pinyin": "zhǔdòngquán"
+  },
+  {
+    "hanzi": "专款",
+    "pinyin": "zhuānkuǎn"
+  },
+  {
+    "hanzi": "承载",
+    "pinyin": "chéngzài"
+  },
+  {
+    "hanzi": "造假",
+    "pinyin": "zàojiǎ"
+  },
+  {
+    "hanzi": "后院",
+    "pinyin": "hòuyuàn"
+  },
+  {
+    "hanzi": "动画",
+    "pinyin": "dònghuà"
+  },
+  {
+    "hanzi": "怪不得",
+    "pinyin": "guàibude"
+  },
+  {
+    "hanzi": "普遍性",
+    "pinyin": "pǔbiànxìng"
+  },
+  {
+    "hanzi": "墙角",
+    "pinyin": "qiángjiǎo"
+  },
+  {
+    "hanzi": "受命",
+    "pinyin": "shòumìng"
+  },
+  {
+    "hanzi": "威风",
+    "pinyin": "wēifēng"
+  },
+  {
+    "hanzi": "义军",
+    "pinyin": "yìjūn"
+  },
+  {
+    "hanzi": "不屑",
+    "pinyin": "bùxiè"
+  },
+  {
+    "hanzi": "工商联",
+    "pinyin": "gōngshānglián"
+  },
+  {
+    "hanzi": "姑母",
+    "pinyin": "gūmǔ"
+  },
+  {
+    "hanzi": "扭头",
+    "pinyin": "niǔtóu"
+  },
+  {
+    "hanzi": "陪伴",
+    "pinyin": "péibàn"
+  },
+  {
+    "hanzi": "前辈",
+    "pinyin": "qiánbèi"
+  },
+  {
+    "hanzi": "伊始",
+    "pinyin": "yīshǐ"
+  },
+  {
+    "hanzi": "值钱",
+    "pinyin": "zhíqián"
+  },
+  {
+    "hanzi": "大喜",
+    "pinyin": "dàxǐ"
+  },
+  {
+    "hanzi": "电动",
+    "pinyin": "diàndòng"
+  },
+  {
+    "hanzi": "工农",
+    "pinyin": "gōngnóng"
+  },
+  {
+    "hanzi": "护照",
+    "pinyin": "hùzhào"
+  },
+  {
+    "hanzi": "饮用",
+    "pinyin": "yǐnyòng"
+  },
+  {
+    "hanzi": "油菜",
+    "pinyin": "yóucài"
+  },
+  {
+    "hanzi": "纵深",
+    "pinyin": "zòngshēn"
+  },
+  {
+    "hanzi": "被窝儿",
+    "pinyin": "bèiwōr"
+  },
+  {
+    "hanzi": "定向",
+    "pinyin": "dìngxiàng"
+  },
+  {
+    "hanzi": "发泄",
+    "pinyin": "fāxiè"
+  },
+  {
+    "hanzi": "宫廷",
+    "pinyin": "gōngtíng"
+  },
+  {
+    "hanzi": "情不自禁",
+    "pinyin": "qíngbùzìjīn"
+  },
+  {
+    "hanzi": "要点",
+    "pinyin": "yàodiǎn"
+  },
+  {
+    "hanzi": "一并",
+    "pinyin": "yībìng"
+  },
+  {
+    "hanzi": "照亮",
+    "pinyin": "zhàoliàng"
+  },
+  {
+    "hanzi": "初衷",
+    "pinyin": "chūzhōng"
+  },
+  {
+    "hanzi": "弹药",
+    "pinyin": "dànyào"
+  },
+  {
+    "hanzi": "气概",
+    "pinyin": "qìgài"
+  },
+  {
+    "hanzi": "无序",
+    "pinyin": "wúxù"
+  },
+  {
+    "hanzi": "小雪",
+    "pinyin": "xiǎoxuě"
+  },
+  {
+    "hanzi": "致命",
+    "pinyin": "zhìmìng"
+  },
+  {
+    "hanzi": "编导",
+    "pinyin": "biāndǎo"
+  },
+  {
+    "hanzi": "单方面",
+    "pinyin": "dānfāngmiàn"
+  },
+  {
+    "hanzi": "电子邮件",
+    "pinyin": "diànzǐyóujiàn"
+  },
+  {
+    "hanzi": "堆积",
+    "pinyin": "duījī"
+  },
+  {
+    "hanzi": "含笑",
+    "pinyin": "hánxiào"
+  },
+  {
+    "hanzi": "嫉妒",
+    "pinyin": "jídù"
+  },
+  {
+    "hanzi": "经纪人",
+    "pinyin": "jīngjìrén"
+  },
+  {
+    "hanzi": "就读",
+    "pinyin": "jiùdú"
+  },
+  {
+    "hanzi": "培植",
+    "pinyin": "péizhí"
+  },
+  {
+    "hanzi": "涉案",
+    "pinyin": "shè'àn"
+  },
+  {
+    "hanzi": "首领",
+    "pinyin": "shǒulǐng"
+  },
+  {
+    "hanzi": "探望",
+    "pinyin": "tànwàng"
+  },
+  {
+    "hanzi": "活性",
+    "pinyin": "huóxìng"
+  },
+  {
+    "hanzi": "客体",
+    "pinyin": "kètǐ"
+  },
+  {
+    "hanzi": "沉痛",
+    "pinyin": "chéntòng"
+  },
+  {
+    "hanzi": "成天",
+    "pinyin": "chéngtiān"
+  },
+  {
+    "hanzi": "后世",
+    "pinyin": "hòushì"
+  },
+  {
+    "hanzi": "晋升",
+    "pinyin": "jìnshēng"
+  },
+  {
+    "hanzi": "精通",
+    "pinyin": "jīngtōng"
+  },
+  {
+    "hanzi": "美感",
+    "pinyin": "měigǎn"
+  },
+  {
+    "hanzi": "奶粉",
+    "pinyin": "nǎifěn"
+  },
+  {
+    "hanzi": "文化馆",
+    "pinyin": "wénhuàguǎn"
+  },
+  {
+    "hanzi": "放手",
+    "pinyin": "fàngshǒu"
+  },
+  {
+    "hanzi": "孵化",
+    "pinyin": "fūhuà"
+  },
+  {
+    "hanzi": "施政",
+    "pinyin": "shīzhèng"
+  },
+  {
+    "hanzi": "鲜红",
+    "pinyin": "xiānhóng"
+  },
+  {
+    "hanzi": "琢磨",
+    "pinyin": "zuómo"
+  },
+  {
+    "hanzi": "天文台",
+    "pinyin": "tiānwéntái"
+  },
+  {
+    "hanzi": "国策",
+    "pinyin": "guócè"
+  },
+  {
+    "hanzi": "偏差",
+    "pinyin": "piānchā"
+  },
+  {
+    "hanzi": "日月",
+    "pinyin": "rìyuè"
+  },
+  {
+    "hanzi": "邀请赛",
+    "pinyin": "yāoqǐngsài"
+  },
+  {
+    "hanzi": "云集",
+    "pinyin": "yúnjí"
+  },
+  {
+    "hanzi": "行车",
+    "pinyin": "xíngchē"
+  },
+  {
+    "hanzi": "责成",
+    "pinyin": "zéchéng"
+  },
+  {
+    "hanzi": "畅销",
+    "pinyin": "chàngxiāo"
+  },
+  {
+    "hanzi": "风浪",
+    "pinyin": "fēnglàng"
+  },
+  {
+    "hanzi": "江水",
+    "pinyin": "jiāngshuǐ"
+  },
+  {
+    "hanzi": "伤愈",
+    "pinyin": "shāngyù"
+  },
+  {
+    "hanzi": "实习",
+    "pinyin": "shíxí"
+  },
+  {
+    "hanzi": "未卜",
+    "pinyin": "wèibǔ"
+  },
+  {
+    "hanzi": "兴致勃勃",
+    "pinyin": "xìngzhìbóbó"
+  },
+  {
+    "hanzi": "肮脏",
+    "pinyin": "āngzāng"
+  },
+  {
+    "hanzi": "工作日",
+    "pinyin": "gōngzuòrì"
+  },
+  {
+    "hanzi": "古迹",
+    "pinyin": "gǔjì"
+  },
+  {
+    "hanzi": "克制",
+    "pinyin": "kèzhì"
+  },
+  {
+    "hanzi": "清单",
+    "pinyin": "qīngdān"
+  },
+  {
+    "hanzi": "山沟",
+    "pinyin": "shāngōu"
+  },
+  {
+    "hanzi": "西边",
+    "pinyin": "xībian"
+  },
+  {
+    "hanzi": "小儿",
+    "pinyin": "xiǎo'ér"
+  },
+  {
+    "hanzi": "一条龙",
+    "pinyin": "yītiáolóng"
+  },
+  {
+    "hanzi": "正中",
+    "pinyin": "zhèngzhōng"
+  },
+  {
+    "hanzi": "庄稼人",
+    "pinyin": "zhuāngjiarén"
+  },
+  {
+    "hanzi": "创伤",
+    "pinyin": "chuāngshāng"
+  },
+  {
+    "hanzi": "及早",
+    "pinyin": "jízǎo"
+  },
+  {
+    "hanzi": "经销",
+    "pinyin": "jīngxiāo"
+  },
+  {
+    "hanzi": "牧场",
+    "pinyin": "mùchǎng"
+  },
+  {
+    "hanzi": "同级",
+    "pinyin": "tóngjí"
+  },
+  {
+    "hanzi": "外债",
+    "pinyin": "wàizhài"
+  },
+  {
+    "hanzi": "柴油",
+    "pinyin": "cháiyóu"
+  },
+  {
+    "hanzi": "负债",
+    "pinyin": "fùzhài"
+  },
+  {
+    "hanzi": "老远",
+    "pinyin": "lǎoyuǎn"
+  },
+  {
+    "hanzi": "力图",
+    "pinyin": "lìtú"
+  },
+  {
+    "hanzi": "漆黑",
+    "pinyin": "qīhēi"
+  },
+  {
+    "hanzi": "身体力行",
+    "pinyin": "shēntǐlìxíng"
+  },
+  {
+    "hanzi": "产地",
+    "pinyin": "chǎndì"
+  },
+  {
+    "hanzi": "长叹",
+    "pinyin": "chángtàn"
+  },
+  {
+    "hanzi": "窗帘",
+    "pinyin": "chuānglián"
+  },
+  {
+    "hanzi": "激励机制",
+    "pinyin": "jīlìjīzhì"
+  },
+  {
+    "hanzi": "联名",
+    "pinyin": "liánmíng"
+  },
+  {
+    "hanzi": "史诗",
+    "pinyin": "shǐshī"
+  },
+  {
+    "hanzi": "板块",
+    "pinyin": "bǎnkuài"
+  },
+  {
+    "hanzi": "编辑部",
+    "pinyin": "biānjíbù"
+  },
+  {
+    "hanzi": "尘土",
+    "pinyin": "chéntǔ"
+  },
+  {
+    "hanzi": "发誓",
+    "pinyin": "fāshì"
+  },
+  {
+    "hanzi": "聆听",
+    "pinyin": "língtīng"
+  },
+  {
+    "hanzi": "屡屡",
+    "pinyin": "lǚlǚ"
+  },
+  {
+    "hanzi": "通电",
+    "pinyin": "tōngdiàn"
+  },
+  {
+    "hanzi": "铜牌",
+    "pinyin": "tóngpái"
+  },
+  {
+    "hanzi": "畜禽",
+    "pinyin": "chùqín"
+  },
+  {
+    "hanzi": "废墟",
+    "pinyin": "fèixū"
+  },
+  {
+    "hanzi": "抚养",
+    "pinyin": "fǔyǎng"
+  },
+  {
+    "hanzi": "轨迹",
+    "pinyin": "guǐjì"
+  },
+  {
+    "hanzi": "红包",
+    "pinyin": "hóngbāo"
+  },
+  {
+    "hanzi": "时段",
+    "pinyin": "shíduàn"
+  },
+  {
+    "hanzi": "想象力",
+    "pinyin": "xiǎngxiànglì"
+  },
+  {
+    "hanzi": "饮酒",
+    "pinyin": "yǐnjiǔ"
+  },
+  {
+    "hanzi": "果真",
+    "pinyin": "guǒzhēn"
+  },
+  {
+    "hanzi": "开战",
+    "pinyin": "kāizhàn"
+  },
+  {
+    "hanzi": "夸大",
+    "pinyin": "kuādà"
+  },
+  {
+    "hanzi": "实绩",
+    "pinyin": "shíjì"
+  },
+  {
+    "hanzi": "坦白",
+    "pinyin": "tǎnbái"
+  },
+  {
+    "hanzi": "一心一意",
+    "pinyin": "yīxīnyīyì"
+  },
+  {
+    "hanzi": "支流",
+    "pinyin": "zhīliú"
+  },
+  {
+    "hanzi": "老爹",
+    "pinyin": "lǎodiē"
+  },
+  {
+    "hanzi": "水产品",
+    "pinyin": "shuǐchǎnpǐn"
+  },
+  {
+    "hanzi": "糟糕",
+    "pinyin": "zāogāo"
+  },
+  {
+    "hanzi": "报废",
+    "pinyin": "bàofèi"
+  },
+  {
+    "hanzi": "搏斗",
+    "pinyin": "bódòu"
+  },
+  {
+    "hanzi": "功勋",
+    "pinyin": "gōngxūn"
+  },
+  {
+    "hanzi": "患病",
+    "pinyin": "huànbìng"
+  },
+  {
+    "hanzi": "俨然",
+    "pinyin": "yǎnrán"
+  },
+  {
+    "hanzi": "诱人",
+    "pinyin": "yòurén"
+  },
+  {
+    "hanzi": "提振",
+    "pinyin": "tízhèn"
+  },
+  {
+    "hanzi": "不复",
+    "pinyin": "bùfù"
+  },
+  {
+    "hanzi": "个子",
+    "pinyin": "gèzi"
+  },
+  {
+    "hanzi": "互为",
+    "pinyin": "hùwéi"
+  },
+  {
+    "hanzi": "话音",
+    "pinyin": "huàyīn"
+  },
+  {
+    "hanzi": "手帕",
+    "pinyin": "shǒupà"
+  },
+  {
+    "hanzi": "坦率",
+    "pinyin": "tǎnshuài"
+  },
+  {
+    "hanzi": "天主教",
+    "pinyin": "tiānzhǔjiào"
+  },
+  {
+    "hanzi": "卫生间",
+    "pinyin": "wèishēngjiān"
+  },
+  {
+    "hanzi": "自主权",
+    "pinyin": "zìzhǔquán"
+  },
+  {
+    "hanzi": "合唱",
+    "pinyin": "héchàng"
+  },
+  {
+    "hanzi": "及至",
+    "pinyin": "jízhì"
+  },
+  {
+    "hanzi": "疗法",
+    "pinyin": "liáofǎ"
+  },
+  {
+    "hanzi": "人造",
+    "pinyin": "rénzào"
+  },
+  {
+    "hanzi": "想念",
+    "pinyin": "xiǎngniàn"
+  },
+  {
+    "hanzi": "东欧",
+    "pinyin": "dōngōu"
+  },
+  {
+    "hanzi": "汇聚",
+    "pinyin": "huìjù"
+  },
+  {
+    "hanzi": "精湛",
+    "pinyin": "jīngzhàn"
+  },
+  {
+    "hanzi": "默然",
+    "pinyin": "mòrán"
+  },
+  {
+    "hanzi": "实情",
+    "pinyin": "shíqíng"
+  },
+  {
+    "hanzi": "市场体系",
+    "pinyin": "shìchǎngtǐxì"
+  },
+  {
+    "hanzi": "照射",
+    "pinyin": "zhàoshè"
+  },
+  {
+    "hanzi": "争相",
+    "pinyin": "zhēngxiāng"
+  },
+  {
+    "hanzi": "暗地",
+    "pinyin": "àndì"
+  },
+  {
+    "hanzi": "丑闻",
+    "pinyin": "chǒuwén"
+  },
+  {
+    "hanzi": "顾不得",
+    "pinyin": "gùbudé"
+  },
+  {
+    "hanzi": "火烧",
+    "pinyin": "huǒshao"
+  },
+  {
+    "hanzi": "全运会",
+    "pinyin": "quányùnhuì"
+  },
+  {
+    "hanzi": "步兵",
+    "pinyin": "bùbīng"
+  },
+  {
+    "hanzi": "出声",
+    "pinyin": "chūshēng"
+  },
+  {
+    "hanzi": "楷模",
+    "pinyin": "kǎimó"
+  },
+  {
+    "hanzi": "红酒",
+    "pinyin": "hóngjiǔ"
+  },
+  {
+    "hanzi": "空间站",
+    "pinyin": "kōngjiānzhàn"
+  },
+  {
+    "hanzi": "炉子",
+    "pinyin": "lúzi"
+  },
+  {
+    "hanzi": "说服力",
+    "pinyin": "shuōfúlì"
+  },
+  {
+    "hanzi": "中资",
+    "pinyin": "zhōngzī"
+  },
+  {
+    "hanzi": "终点",
+    "pinyin": "zhōngdiǎn"
+  },
+  {
+    "hanzi": "撞击",
+    "pinyin": "zhuàngjī"
+  },
+  {
+    "hanzi": "总指挥",
+    "pinyin": "zǒngzhǐhuī"
+  },
+  {
+    "hanzi": "昂扬",
+    "pinyin": "ángyáng"
+  },
+  {
+    "hanzi": "麻子",
+    "pinyin": "mázi"
+  },
+  {
+    "hanzi": "免不了",
+    "pinyin": "miǎnbuliǎo"
+  },
+  {
+    "hanzi": "宁愿",
+    "pinyin": "nìngyuàn"
+  },
+  {
+    "hanzi": "天性",
+    "pinyin": "tiānxìng"
+  },
+  {
+    "hanzi": "通告",
+    "pinyin": "tōnggào"
+  },
+  {
+    "hanzi": "无权",
+    "pinyin": "wúquán"
+  },
+  {
+    "hanzi": "杂志社",
+    "pinyin": "zázhìshè"
+  },
+  {
+    "hanzi": "败坏",
+    "pinyin": "bàihuài"
+  },
+  {
+    "hanzi": "成年",
+    "pinyin": "chéngnián"
+  },
+  {
+    "hanzi": "倒退",
+    "pinyin": "dàotuì"
+  },
+  {
+    "hanzi": "怜悯",
+    "pinyin": "liánmǐn"
+  },
+  {
+    "hanzi": "锣鼓",
+    "pinyin": "luógǔ"
+  },
+  {
+    "hanzi": "个体户",
+    "pinyin": "gètǐhù"
+  },
+  {
+    "hanzi": "机票",
+    "pinyin": "jīpiào"
+  },
+  {
+    "hanzi": "芦苇",
+    "pinyin": "lúwěi"
+  },
+  {
+    "hanzi": "哪能",
+    "pinyin": "nǎnéng"
+  },
+  {
+    "hanzi": "特殊性",
+    "pinyin": "tèshūxìng"
+  },
+  {
+    "hanzi": "超前",
+    "pinyin": "chāoqián"
+  },
+  {
+    "hanzi": "出线",
+    "pinyin": "chūxiàn"
+  },
+  {
+    "hanzi": "赶赴",
+    "pinyin": "gǎnfù"
+  },
+  {
+    "hanzi": "变频",
+    "pinyin": "biànpín"
+  },
+  {
+    "hanzi": "巨人",
+    "pinyin": "jùrén"
+  },
+  {
+    "hanzi": "录音",
+    "pinyin": "lùyīn"
+  },
+  {
+    "hanzi": "面容",
+    "pinyin": "miànróng"
+  },
+  {
+    "hanzi": "煽动",
+    "pinyin": "shāndòng"
+  },
+  {
+    "hanzi": "作曲家",
+    "pinyin": "zuòqǔjiā"
+  },
+  {
+    "hanzi": "大将",
+    "pinyin": "dàjiàng"
+  },
+  {
+    "hanzi": "浮躁",
+    "pinyin": "fúzào"
+  },
+  {
+    "hanzi": "积压",
+    "pinyin": "jīyā"
+  },
+  {
+    "hanzi": "听从",
+    "pinyin": "tīngcóng"
+  },
+  {
+    "hanzi": "许诺",
+    "pinyin": "xǔnuò"
+  },
+  {
+    "hanzi": "摇晃",
+    "pinyin": "yáohuàng"
+  },
+  {
+    "hanzi": "移送",
+    "pinyin": "yísòng"
+  },
+  {
+    "hanzi": "冰冷",
+    "pinyin": "bīnglěng"
+  },
+  {
+    "hanzi": "企穏",
+    "pinyin": "qǐwěn"
+  },
+  {
+    "hanzi": "察觉",
+    "pinyin": "chájué"
+  },
+  {
+    "hanzi": "纪录片",
+    "pinyin": "jìlùpiàn"
+  },
+  {
+    "hanzi": "喀布尔",
+    "pinyin": "kābù'ěr"
+  },
+  {
+    "hanzi": "人才市场",
+    "pinyin": "réncáishìchǎng"
+  },
+  {
+    "hanzi": "采矿",
+    "pinyin": "cǎikuàng"
+  },
+  {
+    "hanzi": "帝王",
+    "pinyin": "dìwáng"
+  },
+  {
+    "hanzi": "深山",
+    "pinyin": "shēnshān"
+  },
+  {
+    "hanzi": "惋惜",
+    "pinyin": "wǎnxī"
+  },
+  {
+    "hanzi": "营运",
+    "pinyin": "yíngyùn"
+  },
+  {
+    "hanzi": "优待",
+    "pinyin": "yōudài"
+  },
+  {
+    "hanzi": "淡薄",
+    "pinyin": "dànbó"
+  },
+  {
+    "hanzi": "点缀",
+    "pinyin": "diǎnzhuì"
+  },
+  {
+    "hanzi": "桂花",
+    "pinyin": "guìhuā"
+  },
+  {
+    "hanzi": "急促",
+    "pinyin": "jícù"
+  },
+  {
+    "hanzi": "紧缩",
+    "pinyin": "jǐnsuō"
+  },
+  {
+    "hanzi": "凝结",
+    "pinyin": "níngjié"
+  },
+  {
+    "hanzi": "破裂",
+    "pinyin": "pòliè"
+  },
+  {
+    "hanzi": "入股",
+    "pinyin": "rùgǔ"
+  },
+  {
+    "hanzi": "身躯",
+    "pinyin": "shēnqū"
+  },
+  {
+    "hanzi": "洗衣机",
+    "pinyin": "xǐyījī"
+  },
+  {
+    "hanzi": "远近",
+    "pinyin": "yuǎnjìn"
+  },
+  {
+    "hanzi": "殖民地",
+    "pinyin": "zhímíndì"
+  },
+  {
+    "hanzi": "车轮",
+    "pinyin": "chēlún"
+  },
+  {
+    "hanzi": "脚踏实地",
+    "pinyin": "jiǎotàshídì"
+  },
+  {
+    "hanzi": "隶属",
+    "pinyin": "lìshǔ"
+  },
+  {
+    "hanzi": "人世",
+    "pinyin": "rénshì"
+  },
+  {
+    "hanzi": "任教",
+    "pinyin": "rènjiào"
+  },
+  {
+    "hanzi": "辩证法",
+    "pinyin": "biànzhèngfǎ"
+  },
+  {
+    "hanzi": "保有量",
+    "pinyin": "bǎoyǒuliàng"
+  },
+  {
+    "hanzi": "吵架",
+    "pinyin": "chǎojià"
+  },
+  {
+    "hanzi": "挙手",
+    "pinyin": "jǔshǒu"
+  },
+  {
+    "hanzi": "杀跌",
+    "pinyin": "shādiē"
+  },
+  {
+    "hanzi": "聘用",
+    "pinyin": "pìnyòng"
+  },
+  {
+    "hanzi": "忍心",
+    "pinyin": "rěnxīn"
+  },
+  {
+    "hanzi": "说了算",
+    "pinyin": "shuōlesuàn"
+  },
+  {
+    "hanzi": "外围",
+    "pinyin": "wàiwéi"
+  },
+  {
+    "hanzi": "想必",
+    "pinyin": "xiǎngbì"
+  },
+  {
+    "hanzi": "坟墓",
+    "pinyin": "fénmù"
+  },
+  {
+    "hanzi": "赖以",
+    "pinyin": "làiyǐ"
+  },
+  {
+    "hanzi": "连任",
+    "pinyin": "liánrèn"
+  },
+  {
+    "hanzi": "扫除",
+    "pinyin": "sǎochú"
+  },
+  {
+    "hanzi": "头疼",
+    "pinyin": "tóuténg"
+  },
+  {
+    "hanzi": "杂文",
+    "pinyin": "záwén"
+  },
+  {
+    "hanzi": "战机",
+    "pinyin": "zhànjī"
+  },
+  {
+    "hanzi": "终日",
+    "pinyin": "zhōngrì"
+  },
+  {
+    "hanzi": "悲壮",
+    "pinyin": "bēizhuàng"
+  },
+  {
+    "hanzi": "别说",
+    "pinyin": "biéshuō"
+  },
+  {
+    "hanzi": "名言",
+    "pinyin": "míngyán"
+  },
+  {
+    "hanzi": "拟定",
+    "pinyin": "nǐdìng"
+  },
+  {
+    "hanzi": "四肢",
+    "pinyin": "sìzhī"
+  },
+  {
+    "hanzi": "微型",
+    "pinyin": "wēixíng"
+  },
+  {
+    "hanzi": "香味",
+    "pinyin": "xiāngwèi"
+  },
+  {
+    "hanzi": "胸膛",
+    "pinyin": "xiōngtáng"
+  },
+  {
+    "hanzi": "征程",
+    "pinyin": "zhēngchéng"
+  },
+  {
+    "hanzi": "志愿军",
+    "pinyin": "zhìyuànjūn"
+  },
+  {
+    "hanzi": "酿成",
+    "pinyin": "niàngchéng"
+  },
+  {
+    "hanzi": "炮弹",
+    "pinyin": "pàodàn"
+  },
+  {
+    "hanzi": "思绪",
+    "pinyin": "sīxù"
+  },
+  {
+    "hanzi": "帮教",
+    "pinyin": "bāngjiào"
+  },
+  {
+    "hanzi": "沉积",
+    "pinyin": "chénjī"
+  },
+  {
+    "hanzi": "丰满",
+    "pinyin": "fēngmǎn"
+  },
+  {
+    "hanzi": "高官",
+    "pinyin": "gāoguān"
+  },
+  {
+    "hanzi": "毁坏",
+    "pinyin": "huǐhuài"
+  },
+  {
+    "hanzi": "降雨",
+    "pinyin": "jiàngyǔ"
+  },
+  {
+    "hanzi": "兽医",
+    "pinyin": "shòuyī"
+  },
+  {
+    "hanzi": "肆虐",
+    "pinyin": "sìnüè"
+  },
+  {
+    "hanzi": "译本",
+    "pinyin": "yìběn"
+  },
+  {
+    "hanzi": "真实性",
+    "pinyin": "zhēnshíxìng"
+  },
+  {
+    "hanzi": "正要",
+    "pinyin": "zhèngyào"
+  },
+  {
+    "hanzi": "政变",
+    "pinyin": "zhèngbiàn"
+  },
+  {
+    "hanzi": "车门",
+    "pinyin": "chēmén"
+  },
+  {
+    "hanzi": "风声",
+    "pinyin": "fēngshēng"
+  },
+  {
+    "hanzi": "航道",
+    "pinyin": "hángdào"
+  },
+  {
+    "hanzi": "快车",
+    "pinyin": "kuàichē"
+  },
+  {
+    "hanzi": "面色",
+    "pinyin": "miànsè"
+  },
+  {
+    "hanzi": "名副其实",
+    "pinyin": "míngfùqíshí"
+  },
+  {
+    "hanzi": "谦虚",
+    "pinyin": "qiānxū"
+  },
+  {
+    "hanzi": "受骗",
+    "pinyin": "shòupiàn"
+  },
+  {
+    "hanzi": "治愈",
+    "pinyin": "zhìyù"
+  },
+  {
+    "hanzi": "传记",
+    "pinyin": "zhuànjì"
+  },
+  {
+    "hanzi": "自有",
+    "pinyin": "zìyǒu"
+  },
+  {
+    "hanzi": "变质",
+    "pinyin": "biànzhì"
+  },
+  {
+    "hanzi": "残忍",
+    "pinyin": "cánrěn"
+  },
+  {
+    "hanzi": "长处",
+    "pinyin": "chángchù"
+  },
+  {
+    "hanzi": "底蕴",
+    "pinyin": "dǐyùn"
+  },
+  {
+    "hanzi": "受害",
+    "pinyin": "shòuhài"
+  },
+  {
+    "hanzi": "通航",
+    "pinyin": "tōngháng"
+  },
+  {
+    "hanzi": "不约而同",
+    "pinyin": "bùyuē'értóng"
+  },
+  {
+    "hanzi": "村落",
+    "pinyin": "cūnluò"
+  },
+  {
+    "hanzi": "返乡",
+    "pinyin": "fǎnxiāng"
+  },
+  {
+    "hanzi": "后顾之忧",
+    "pinyin": "hòugùzhīyōu"
+  },
+  {
+    "hanzi": "纪念日",
+    "pinyin": "jìniànrì"
+  },
+  {
+    "hanzi": "假使",
+    "pinyin": "jiǎshǐ"
+  },
+  {
+    "hanzi": "苗木",
+    "pinyin": "miáomù"
+  },
+  {
+    "hanzi": "张扬",
+    "pinyin": "zhāngyáng"
+  },
+  {
+    "hanzi": "法令",
+    "pinyin": "fǎlìng"
+  },
+  {
+    "hanzi": "横向",
+    "pinyin": "héngxiàng"
+  },
+  {
+    "hanzi": "男单",
+    "pinyin": "nándān"
+  },
+  {
+    "hanzi": "疯子",
+    "pinyin": "fēngzi"
+  },
+  {
+    "hanzi": "开国",
+    "pinyin": "kāiguó"
+  },
+  {
+    "hanzi": "匮乏",
+    "pinyin": "kuìfá"
+  },
+  {
+    "hanzi": "留守",
+    "pinyin": "liúshǒu"
+  },
+  {
+    "hanzi": "诊所",
+    "pinyin": "zhěnsuǒ"
+  },
+  {
+    "hanzi": "额度",
+    "pinyin": "édù"
+  },
+  {
+    "hanzi": "家禽",
+    "pinyin": "jiāqín"
+  },
+  {
+    "hanzi": "调配",
+    "pinyin": "tiáopèi"
+  },
+  {
+    "hanzi": "驻外",
+    "pinyin": "zhùwài"
+  },
+  {
+    "hanzi": "筹划",
+    "pinyin": "chóuhuà"
+  },
+  {
+    "hanzi": "辍学",
+    "pinyin": "chuòxué"
+  },
+  {
+    "hanzi": "规程",
+    "pinyin": "guīchéng"
+  },
+  {
+    "hanzi": "上头",
+    "pinyin": "shàngtou"
+  },
+  {
+    "hanzi": "微妙",
+    "pinyin": "wēimiào"
+  },
+  {
+    "hanzi": "辗转",
+    "pinyin": "zhǎnzhuǎn"
+  },
+  {
+    "hanzi": "吃喝",
+    "pinyin": "chīhē"
+  },
+  {
+    "hanzi": "出战",
+    "pinyin": "chūzhàn"
+  },
+  {
+    "hanzi": "归结",
+    "pinyin": "guījié"
+  },
+  {
+    "hanzi": "迷惑",
+    "pinyin": "míhuò"
+  },
+  {
+    "hanzi": "欣然",
+    "pinyin": "xīnrán"
+  },
+  {
+    "hanzi": "成年人",
+    "pinyin": "chéngniánrén"
+  },
+  {
+    "hanzi": "合一",
+    "pinyin": "héyī"
+  },
+  {
+    "hanzi": "激素",
+    "pinyin": "jīsù"
+  },
+  {
+    "hanzi": "前身",
+    "pinyin": "qiánshēn"
+  },
+  {
+    "hanzi": "样本",
+    "pinyin": "yàngběn"
+  },
+  {
+    "hanzi": "语调",
+    "pinyin": "yǔdiào"
+  },
+  {
+    "hanzi": "自已",
+    "pinyin": "zìyǐ"
+  },
+  {
+    "hanzi": "荡荡",
+    "pinyin": "dàngdàng"
+  },
+  {
+    "hanzi": "基石",
+    "pinyin": "jīshí"
+  },
+  {
+    "hanzi": "庙会",
+    "pinyin": "miàohuì"
+  },
+  {
+    "hanzi": "全权",
+    "pinyin": "quánquán"
+  },
+  {
+    "hanzi": "生产方式",
+    "pinyin": "shēngchǎnfāngshì"
+  },
+  {
+    "hanzi": "手腕",
+    "pinyin": "shǒuwàn"
+  },
+  {
+    "hanzi": "展厅",
+    "pinyin": "zhǎntīng"
+  },
+  {
+    "hanzi": "遵照",
+    "pinyin": "zūnzhào"
+  },
+  {
+    "hanzi": "好汉",
+    "pinyin": "hǎohàn"
+  },
+  {
+    "hanzi": "火热",
+    "pinyin": "huǒrè"
+  },
+  {
+    "hanzi": "清脆",
+    "pinyin": "qīngcuì"
+  },
+  {
+    "hanzi": "下意识",
+    "pinyin": "xiàyìshí"
+  },
+  {
+    "hanzi": "自尽",
+    "pinyin": "zìjìn"
+  },
+  {
+    "hanzi": "半天",
+    "pinyin": "bàntiān"
+  },
+  {
+    "hanzi": "罢工",
+    "pinyin": "bàgōng"
+  },
+  {
+    "hanzi": "不公",
+    "pinyin": "bùgōng"
+  },
+  {
+    "hanzi": "登台",
+    "pinyin": "dēngtái"
+  },
+  {
+    "hanzi": "独有",
+    "pinyin": "dúyǒu"
+  },
+  {
+    "hanzi": "明月",
+    "pinyin": "míngyuè"
+  },
+  {
+    "hanzi": "无需",
+    "pinyin": "wúxū"
+  },
+  {
+    "hanzi": "主人翁",
+    "pinyin": "zhǔrénwēng"
+  },
+  {
+    "hanzi": "访谈",
+    "pinyin": "fǎngtán"
+  },
+  {
+    "hanzi": "戈壁",
+    "pinyin": "gēbì"
+  },
+  {
+    "hanzi": "抗争",
+    "pinyin": "kàngzhēng"
+  },
+  {
+    "hanzi": "老者",
+    "pinyin": "lǎozhě"
+  },
+  {
+    "hanzi": "梦幻",
+    "pinyin": "mènghuàn"
+  },
+  {
+    "hanzi": "特邀",
+    "pinyin": "tèyāo"
+  },
+  {
+    "hanzi": "威严",
+    "pinyin": "wēiyán"
+  },
+  {
+    "hanzi": "治污",
+    "pinyin": "zhìwū"
+  },
+  {
+    "hanzi": "冬奥会",
+    "pinyin": "dōng'àohuì"
+  },
+  {
+    "hanzi": "冷落",
+    "pinyin": "lěngluò"
+  },
+  {
+    "hanzi": "首付",
+    "pinyin": "shǒufù"
+  },
+  {
+    "hanzi": "舍得",
+    "pinyin": "shěde"
+  },
+  {
+    "hanzi": "小车",
+    "pinyin": "xiǎochē"
+  },
+  {
+    "hanzi": "原野",
+    "pinyin": "yuányě"
+  },
+  {
+    "hanzi": "镇定",
+    "pinyin": "zhèndìng"
+  },
+  {
+    "hanzi": "昂贵",
+    "pinyin": "ángguì"
+  },
+  {
+    "hanzi": "哽咽",
+    "pinyin": "gěngyè"
+  },
+  {
+    "hanzi": "脊梁",
+    "pinyin": "jǐliáng"
+  },
+  {
+    "hanzi": "家政",
+    "pinyin": "jiāzhèng"
+  },
+  {
+    "hanzi": "勘察",
+    "pinyin": "kānchá"
+  },
+  {
+    "hanzi": "求学",
+    "pinyin": "qiúxué"
+  },
+  {
+    "hanzi": "试想",
+    "pinyin": "shìxiǎng"
+  },
+  {
+    "hanzi": "暑期",
+    "pinyin": "shǔqī"
+  },
+  {
+    "hanzi": "探险",
+    "pinyin": "tànxiǎn"
+  },
+  {
+    "hanzi": "医疗队",
+    "pinyin": "yīliáoduì"
+  },
+  {
+    "hanzi": "白人",
+    "pinyin": "báirén"
+  },
+  {
+    "hanzi": "放射",
+    "pinyin": "fàngshè"
+  },
+  {
+    "hanzi": "谎言",
+    "pinyin": "huǎngyán"
+  },
+  {
+    "hanzi": "荔枝",
+    "pinyin": "lìzhī"
+  },
+  {
+    "hanzi": "人手",
+    "pinyin": "rénshǒu"
+  },
+  {
+    "hanzi": "私有",
+    "pinyin": "sīyǒu"
+  },
+  {
+    "hanzi": "作法",
+    "pinyin": "zuòfǎ"
+  },
+  {
+    "hanzi": "做文章",
+    "pinyin": "zuòwénzhāng"
+  },
+  {
+    "hanzi": "采伐",
+    "pinyin": "cǎifá"
+  },
+  {
+    "hanzi": "除夕",
+    "pinyin": "chúxī"
+  },
+  {
+    "hanzi": "加倍",
+    "pinyin": "jiābèi"
+  },
+  {
+    "hanzi": "泉水",
+    "pinyin": "quánshuǐ"
+  },
+  {
+    "hanzi": "思想家",
+    "pinyin": "sīxiǎngjiā"
+  },
+  {
+    "hanzi": "打赢",
+    "pinyin": "dǎyíng"
+  },
+  {
+    "hanzi": "电影院",
+    "pinyin": "diànyǐngyuàn"
+  },
+  {
+    "hanzi": "反问",
+    "pinyin": "fǎnwèn"
+  },
+  {
+    "hanzi": "关中",
+    "pinyin": "guānzhōng"
+  },
+  {
+    "hanzi": "海岛",
+    "pinyin": "hǎidǎo"
+  },
+  {
+    "hanzi": "觉醒",
+    "pinyin": "juéxǐng"
+  },
+  {
+    "hanzi": "盲人",
+    "pinyin": "mángrén"
+  },
+  {
+    "hanzi": "事事",
+    "pinyin": "shìshì"
+  },
+  {
+    "hanzi": "蕴含",
+    "pinyin": "yùnhán"
+  }
+]
