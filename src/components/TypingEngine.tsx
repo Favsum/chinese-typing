@@ -244,7 +244,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
            <div className="absolute inset-0 z-50 flex items-start justify-center pt-20 bg-white/60 backdrop-blur-[1px]">
              <div className="flex items-center gap-2 px-5 py-2.5 text-white bg-indigo-600 rounded-full shadow-lg cursor-pointer hover:bg-indigo-700 transition-transform hover:scale-105">
                 <AlertCircle size={18} />
-                <span className="font-medium">点击继续练习 (计时已暂停)</span>
+                <span className="font-medium">点击继续练习</span>
              </div>
            </div>
         )}
