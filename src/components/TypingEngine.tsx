@@ -191,7 +191,6 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
             const userChar = committedValue[absIndex];
             const isCurrent = absIndex === committedValue.length;
             let charColor = "text-slate-900"; 
-            let bgColor = "bg-transparent";
             if (absIndex < committedValue.length) {
               if (userChar === char) {
                 charColor = "text-emerald-600 font-medium";
