@@ -194,18 +194,17 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
             let bgColor = "bg-transparent";
             if (absIndex < committedValue.length) {
               if (userChar === char) {
-                charColor = "text-emerald-600 font-bold";
+                charColor = "text-emerald-600 font-medium";
               } else {
-                charColor = "text-rose-600 font-bold";
-                bgColor = "bg-rose-50"; 
+                charColor = "text-rose-500 font-medium";
               }
             }
             return (
                <div key={charIdxInWord} className="flex flex-col items-center">
-                  <div className={`text-xl mb-0 leading-none ${absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-800 font-medium'}`}>
+                  <div className={`text-2xl mb-0 leading-none ${absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>
                     {char}
                   </div>
-                  <div ref={isCurrent ? activeCharRef : null} className={`relative w-6 h-8 flex items-center justify-center text-lg transition-colors duration-75 ${bgColor} ${charColor}`}>
+                  <div ref={isCurrent ? activeCharRef : null} className={`relative w-6 h-8 flex items-center justify-center text-2xl transition-colors duration-75 ${charColor}`}>
                     {userChar}
                     {isCurrent && isFocused && (
                         <div className="absolute bottom-1 w-5 h-0.5 bg-indigo-500 cursor-blink"></div>
