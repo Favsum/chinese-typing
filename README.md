@@ -1,2 +1,2 @@
 
-词库来源：《现代汉语常用词表》(第2版)
+词库：https://github.com/Favsum/chinese-words
