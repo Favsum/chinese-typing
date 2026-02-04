@@ -183,7 +183,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
     let charOffsetCounter = 0;
 
     return (
-      <div className="flex flex-wrap gap-x-4 gap-y-4 content-start select-none">
+      <div className="flex flex-wrap gap-x-4 gap-y-6 content-start select-none">
         {currentItems.map((item, wordIdx) => {
           const chars = item.hanzi.split('').map((char, charIdxInWord) => {
             const absIndex = globalCharIndexBase + charOffsetCounter;
@@ -200,7 +200,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
             }
             return (
                <div key={charIdxInWord} className="flex flex-col items-center">
-                  <div className={`text-2xl mb-0 leading-none ${absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>
+                  <div className={`text-2xl mb-0 leading-none ${absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-700 font-medium'}`}>
                     {char}
                   </div>
                   <div ref={isCurrent ? activeCharRef : null} className={`relative w-6 h-8 flex items-center justify-center text-2xl transition-colors duration-75 ${charColor}`}>
@@ -214,7 +214,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
           });
           return (
             <div key={wordIdx} className="flex flex-col items-center px-0.5 rounded hover:bg-slate-50 transition-colors">
-               <div className="text-xs text-indigo-400 font-mono tracking-tight leading-none opacity-80 mb-1">
+               <div className="text-xs text-indigo-200 font-mono tracking-tight leading-none opacity-80 mb-1">
                  {item.pinyin}
                </div>
                <div className="flex gap-0">
