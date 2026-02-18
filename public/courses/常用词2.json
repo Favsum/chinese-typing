@@ -1,13 +1,5 @@
 [
   {
-    "hanzi": "欢迎",
-    "pinyin": "huānyíng"
-  },
-  {
-    "hanzi": "恢复",
-    "pinyin": "huīfù"
-  },
-  {
     "hanzi": "不足",
     "pinyin": "bùzú"
   },
@@ -334,6 +326,10 @@
   {
     "hanzi": "祖国",
     "pinyin": "zǔguó"
+  },
+  {
+    "hanzi": "不但",
+    "pinyin": "bùdàn"
   },
   {
     "hanzi": "报道",
@@ -1712,10 +1708,6 @@
     "pinyin": "chíxù"
   },
   {
-    "hanzi": "刮目相看",
-    "pinyin": "guāmùxiāngkàn"
-  },
-  {
     "hanzi": "显然",
     "pinyin": "xiǎnrán"
   },
@@ -1998,5 +1990,13 @@
   {
     "hanzi": "严肃",
     "pinyin": "yánsù"
+  },
+  {
+    "hanzi": "上述",
+    "pinyin": "shàngshù"
+  },
+  {
+    "hanzi": "担任",
+    "pinyin": "dānrèn"
   }
 ]

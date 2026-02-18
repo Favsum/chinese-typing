@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "旧闻",
-    "pinyin": "jiùwén"
-  },
-  {
-    "hanzi": "居所",
-    "pinyin": "jūsuǒ"
-  },
-  {
-    "hanzi": "捐税",
-    "pinyin": "juānshuì"
-  },
-  {
-    "hanzi": "娟秀",
-    "pinyin": "juānxiù"
-  },
-  {
-    "hanzi": "军转民",
-    "pinyin": "jūnzhuǎnmín"
-  },
-  {
-    "hanzi": "菌类",
-    "pinyin": "jūnlèi"
-  },
-  {
     "hanzi": "柯尔克孜族",
     "pinyin": "kē'ěrkèzīzú"
   },
@@ -1432,7 +1408,7 @@
     "pinyin": "shénfó"
   },
   {
-    "hanzi": "申稿",
+    "hanzi": "审稿",
     "pinyin": "shěngǎo"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "巧夺",
     "pinyin": "qiǎoduó"
+  },
+  {
+    "hanzi": "人杰地灵",
+    "pinyin": "rénjiédìlíng"
+  },
+  {
+    "hanzi": "糅合",
+    "pinyin": "róuhé"
+  },
+  {
+    "hanzi": "舌战",
+    "pinyin": "shézhàn"
+  },
+  {
+    "hanzi": "盛传",
+    "pinyin": "shèngchuán"
+  },
+  {
+    "hanzi": "失语",
+    "pinyin": "shīyǔ"
+  },
+  {
+    "hanzi": "受戒",
+    "pinyin": "shòujiè"
   }
 ]

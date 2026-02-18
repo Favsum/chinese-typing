@@ -1,21 +1,5 @@
 [
   {
-    "hanzi": "古代",
-    "pinyin": "gǔdài"
-  },
-  {
-    "hanzi": "等于",
-    "pinyin": "děngyú"
-  },
-  {
-    "hanzi": "等待",
-    "pinyin": "děngdài"
-  },
-  {
-    "hanzi": "一行",
-    "pinyin": "yīxíng"
-  },
-  {
     "hanzi": "子女",
     "pinyin": "zǐnǚ"
   },
@@ -1136,7 +1120,7 @@
     "pinyin": "pǔjí"
   },
   {
-    "hanzi": "申査",
+    "hanzi": "审查",
     "pinyin": "shěnchá"
   },
   {
@@ -1998,5 +1982,21 @@
   {
     "hanzi": "小雨",
     "pinyin": "xiǎoyǔ"
+  },
+  {
+    "hanzi": "细胞",
+    "pinyin": "xìbāo"
+  },
+  {
+    "hanzi": "航空",
+    "pinyin": "hángkōng"
+  },
+  {
+    "hanzi": "现状",
+    "pinyin": "xiànzhuàng"
+  },
+  {
+    "hanzi": "微信",
+    "pinyin": "wēixìn"
   }
 ]

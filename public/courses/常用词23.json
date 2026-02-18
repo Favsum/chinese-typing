@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "重力",
-    "pinyin": "zhònglì"
-  },
-  {
-    "hanzi": "不畅",
-    "pinyin": "bùchàng"
-  },
-  {
-    "hanzi": "道义",
-    "pinyin": "dàoyì"
-  },
-  {
-    "hanzi": "控诉",
-    "pinyin": "kòngsù"
-  },
-  {
-    "hanzi": "领事",
-    "pinyin": "lǐngshì"
-  },
-  {
-    "hanzi": "诗文",
-    "pinyin": "shīwén"
-  },
-  {
-    "hanzi": "水晶",
-    "pinyin": "shuǐjīng"
-  },
-  {
     "hanzi": "推举",
     "pinyin": "tuījǔ"
   },
@@ -664,7 +636,7 @@
     "pinyin": "yuànyán"
   },
   {
-    "hanzi": "震懾",
+    "hanzi": "震慑",
     "pinyin": "zhènshè"
   },
   {
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "陈设",
     "pinyin": "chénshè"
+  },
+  {
+    "hanzi": "此起彼伏",
+    "pinyin": "cǐqǐbǐfú"
+  },
+  {
+    "hanzi": "反攻",
+    "pinyin": "fǎngōng"
+  },
+  {
+    "hanzi": "直选",
+    "pinyin": "zhíxuǎn"
+  },
+  {
+    "hanzi": "复原",
+    "pinyin": "fùyuán"
+  },
+  {
+    "hanzi": "旱情",
+    "pinyin": "hànqíng"
+  },
+  {
+    "hanzi": "厚望",
+    "pinyin": "hòuwàng"
+  },
+  {
+    "hanzi": "劲旅",
+    "pinyin": "jìnglǚ"
   }
 ]

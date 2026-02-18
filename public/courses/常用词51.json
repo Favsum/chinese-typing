@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "面板",
-    "pinyin": "miànbǎn"
-  },
-  {
-    "hanzi": "面食",
-    "pinyin": "miànshí"
-  },
-  {
-    "hanzi": "面相",
-    "pinyin": "miànxiàng"
-  },
-  {
-    "hanzi": "明丽",
-    "pinyin": "mínglì"
-  },
-  {
-    "hanzi": "拟于",
-    "pinyin": "nǐyú"
-  },
-  {
-    "hanzi": "农副业",
-    "pinyin": "nóngfùyè"
-  },
-  {
-    "hanzi": "女声",
-    "pinyin": "nǚshēng"
-  },
-  {
     "hanzi": "骗术",
     "pinyin": "piànshù"
   },
@@ -100,7 +72,7 @@
     "pinyin": "tóngqián"
   },
   {
-    "hanzi": "禿山",
+    "hanzi": "秃山",
     "pinyin": "tūshān"
   },
   {
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "培土",
     "pinyin": "péitǔ"
+  },
+  {
+    "hanzi": "皮棉",
+    "pinyin": "pímián"
+  },
+  {
+    "hanzi": "偏心",
+    "pinyin": "piānxīn"
+  },
+  {
+    "hanzi": "棋迷",
+    "pinyin": "qímí"
+  },
+  {
+    "hanzi": "抢种",
+    "pinyin": "qiǎngzhòng"
+  },
+  {
+    "hanzi": "穷光蛋",
+    "pinyin": "qióngguāngdàn"
+  },
+  {
+    "hanzi": "山包",
+    "pinyin": "shānbāo"
+  },
+  {
+    "hanzi": "善举",
+    "pinyin": "shànjǔ"
   }
 ]

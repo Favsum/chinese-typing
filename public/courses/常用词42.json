@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "数码相机",
-    "pinyin": "shùmǎxiàngjī"
-  },
-  {
-    "hanzi": "说不准",
-    "pinyin": "shuōbuzhǔn"
-  },
-  {
-    "hanzi": "套间",
-    "pinyin": "tàojiān"
-  },
-  {
-    "hanzi": "厅堂",
-    "pinyin": "tīngtáng"
-  },
-  {
-    "hanzi": "先天不足",
-    "pinyin": "xiāntiānbùzú"
-  },
-  {
-    "hanzi": "向日葵",
-    "pinyin": "xiàngrìkuí"
-  },
-  {
-    "hanzi": "血脂",
-    "pinyin": "xuèzhī"
-  },
-  {
     "hanzi": "扬眉吐气",
     "pinyin": "yángméitǔqì"
   },
@@ -844,7 +816,7 @@
     "pinyin": "xuànyùn"
   },
   {
-    "hanzi": "岩漿",
+    "hanzi": "岩浆",
     "pinyin": "yánjiāng"
   },
   {
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "好玩儿",
     "pinyin": "hǎowánr"
+  },
+  {
+    "hanzi": "合龙",
+    "pinyin": "hélóng"
+  },
+  {
+    "hanzi": "贪玩",
+    "pinyin": "tānwán"
+  },
+  {
+    "hanzi": "甲醇",
+    "pinyin": "jiǎchún"
+  },
+  {
+    "hanzi": "甲鱼",
+    "pinyin": "jiǎyú"
+  },
+  {
+    "hanzi": "教程",
+    "pinyin": "jiàochéng"
+  },
+  {
+    "hanzi": "静候",
+    "pinyin": "jìnghòu"
+  },
+  {
+    "hanzi": "老大哥",
+    "pinyin": "lǎodàgē"
   }
 ]

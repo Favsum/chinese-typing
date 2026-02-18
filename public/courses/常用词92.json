@@ -1,13 +1,5 @@
 [
   {
-    "hanzi": "斜度",
-    "pinyin": "xiédù"
-  },
-  {
-    "hanzi": "心存芥蒂",
-    "pinyin": "xīncúnjièdì"
-  },
-  {
     "hanzi": "醒脑",
     "pinyin": "xǐngnǎo"
   },
@@ -1612,6 +1604,10 @@
     "pinyin": "zǔchǎn"
   },
   {
+    "hanzi": "罪不容诛",
+    "pinyin": "zuìbùróngzhū"
+  },
+  {
     "hanzi": "坐探",
     "pinyin": "zuòtàn"
   },
@@ -1998,5 +1994,9 @@
   {
     "hanzi": "宫颈",
     "pinyin": "gōngjǐng"
+  },
+  {
+    "hanzi": "古文献",
+    "pinyin": "gǔwénxiàn"
   }
 ]

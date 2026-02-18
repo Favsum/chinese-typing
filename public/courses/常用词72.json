@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "上装",
-    "pinyin": "shàngzhuāng"
-  },
-  {
-    "hanzi": "蛇胆",
-    "pinyin": "shédǎn"
-  },
-  {
-    "hanzi": "神道",
-    "pinyin": "shéndao"
-  },
-  {
-    "hanzi": "神经错乱",
-    "pinyin": "shénjīngcuòluàn"
-  },
-  {
-    "hanzi": "生水",
-    "pinyin": "shēngshuǐ"
-  },
-  {
-    "hanzi": "盛举",
-    "pinyin": "shèngjǔ"
-  },
-  {
     "hanzi": "十拿九稳",
     "pinyin": "shínájiǔwěn"
   },
@@ -268,7 +244,7 @@
     "pinyin": "zàibō"
   },
   {
-    "hanzi": "昭然若掲",
+    "hanzi": "昭然若揭",
     "pinyin": "zhāoránruòjiē"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "风习",
     "pinyin": "fēngxí"
+  },
+  {
+    "hanzi": "复课",
+    "pinyin": "fùkè"
+  },
+  {
+    "hanzi": "复评",
+    "pinyin": "fùpíng"
+  },
+  {
+    "hanzi": "腹稿",
+    "pinyin": "fùgǎo"
+  },
+  {
+    "hanzi": "概貌",
+    "pinyin": "gàimào"
+  },
+  {
+    "hanzi": "擀面杖",
+    "pinyin": "gǎnmiànzhàng"
+  },
+  {
+    "hanzi": "公爹",
+    "pinyin": "gōngdiē"
   }
 ]

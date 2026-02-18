@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "度量衡",
-    "pinyin": "dùliànghéng"
-  },
-  {
-    "hanzi": "多嘴多舌",
-    "pinyin": "duōzuǐduōshé"
-  },
-  {
-    "hanzi": "鹅蛋脸",
-    "pinyin": "édànliǎn"
-  },
-  {
-    "hanzi": "恶狗",
-    "pinyin": "ègǒu"
-  },
-  {
-    "hanzi": "恶言",
-    "pinyin": "èyán"
-  },
-  {
-    "hanzi": "翻跟头",
-    "pinyin": "fāngēntou"
-  },
-  {
     "hanzi": "犯事",
     "pinyin": "fànshì"
   },
@@ -694,6 +670,10 @@
   {
     "hanzi": "洋财",
     "pinyin": "yángcái"
+  },
+  {
+    "hanzi": "仰赖",
+    "pinyin": "yǎnglài"
   },
   {
     "hanzi": "邀请信",
@@ -1998,5 +1978,25 @@
   {
     "hanzi": "吹拉弹唱",
     "pinyin": "chuīlātánchàng"
+  },
+  {
+    "hanzi": "催熟",
+    "pinyin": "cuīshú"
+  },
+  {
+    "hanzi": "打群架",
+    "pinyin": "dǎqúnjià"
+  },
+  {
+    "hanzi": "代称",
+    "pinyin": "dàichēng"
+  },
+  {
+    "hanzi": "荡妇",
+    "pinyin": "dàngfù"
+  },
+  {
+    "hanzi": "得宜",
+    "pinyin": "déyí"
   }
 ]

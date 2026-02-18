@@ -1464,10 +1464,6 @@
     "pinyin": "bìngqiě"
   },
   {
-    "hanzi": "不但",
-    "pinyin": "bùdàn"
-  },
-  {
     "hanzi": "那里",
     "pinyin": "nàlǐ"
   },
@@ -1558,10 +1554,6 @@
   {
     "hanzi": "不再",
     "pinyin": "bùzài"
-  },
-  {
-    "hanzi": "名城",
-    "pinyin": "míngchéng"
   },
   {
     "hanzi": "积极",
@@ -1998,5 +1990,13 @@
   {
     "hanzi": "双方",
     "pinyin": "shuāngfāng"
+  },
+  {
+    "hanzi": "欢迎",
+    "pinyin": "huānyíng"
+  },
+  {
+    "hanzi": "恢复",
+    "pinyin": "huīfù"
   }
 ]

@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "木讷",
-    "pinyin": "mùnè"
-  },
-  {
-    "hanzi": "凝练",
-    "pinyin": "níngliàn"
-  },
-  {
-    "hanzi": "妞妞",
-    "pinyin": "niūniū"
-  },
-  {
-    "hanzi": "女相",
-    "pinyin": "nǚxiàng"
-  },
-  {
-    "hanzi": "暖瓶",
-    "pinyin": "nuǎnpíng"
-  },
-  {
-    "hanzi": "棚户区",
-    "pinyin": "pénghùqū"
-  },
-  {
-    "hanzi": "平手",
-    "pinyin": "píngshǒu"
-  },
-  {
     "hanzi": "网警",
     "pinyin": "wǎngjǐng"
   },
@@ -858,6 +830,10 @@
   {
     "hanzi": "懂行",
     "pinyin": "dǒngháng"
+  },
+  {
+    "hanzi": "抖颤",
+    "pinyin": "dǒuchàn"
   },
   {
     "hanzi": "独领风骚",
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "画龙点睛",
     "pinyin": "huàlóngdiǎnjīng"
+  },
+  {
+    "hanzi": "回迁",
+    "pinyin": "huíqiān"
+  },
+  {
+    "hanzi": "汇价",
+    "pinyin": "huìjià"
+  },
+  {
+    "hanzi": "火攻",
+    "pinyin": "huǒgōng"
+  },
+  {
+    "hanzi": "祸乱",
+    "pinyin": "huòluàn"
+  },
+  {
+    "hanzi": "记挂",
+    "pinyin": "jìguà"
+  },
+  {
+    "hanzi": "季风气候",
+    "pinyin": "jìfēngqìhòu"
   }
 ]

@@ -1,21 +1,5 @@
 [
   {
-    "hanzi": "整整",
-    "pinyin": "zhěngzhěng"
-  },
-  {
-    "hanzi": "天然气",
-    "pinyin": "tiānránqì"
-  },
-  {
-    "hanzi": "替代",
-    "pinyin": "tìdài"
-  },
-  {
-    "hanzi": "供给",
-    "pinyin": "gōngjǐ"
-  },
-  {
     "hanzi": "邻居",
     "pinyin": "línjū"
   },
@@ -800,10 +784,6 @@
     "pinyin": "shùmù"
   },
   {
-    "hanzi": "弓子",
-    "pinyin": "gōngzi"
-  },
-  {
     "hanzi": "倘若",
     "pinyin": "tǎngruò"
   },
@@ -1074,10 +1054,6 @@
   {
     "hanzi": "任用",
     "pinyin": "rènyòng"
-  },
-  {
-    "hanzi": "臭名远扬",
-    "pinyin": "chòumíngyuǎnyáng"
   },
   {
     "hanzi": "涌现",
@@ -1788,7 +1764,7 @@
     "pinyin": "mínyì"
   },
   {
-    "hanzi": "平穏",
+    "hanzi": "平稳",
     "pinyin": "píngwěn"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "后勤",
     "pinyin": "hòuqín"
+  },
+  {
+    "hanzi": "领会",
+    "pinyin": "lǐnghuì"
+  },
+  {
+    "hanzi": "撤销",
+    "pinyin": "chèxiāo"
+  },
+  {
+    "hanzi": "体坛",
+    "pinyin": "tǐtán"
+  },
+  {
+    "hanzi": "物流",
+    "pinyin": "wùliú"
+  },
+  {
+    "hanzi": "立案",
+    "pinyin": "lìàn"
+  },
+  {
+    "hanzi": "学位",
+    "pinyin": "xuéwèi"
   }
 ]

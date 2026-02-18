@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "枣树",
-    "pinyin": "zǎoshù"
-  },
-  {
-    "hanzi": "震荡",
-    "pinyin": "zhèndàng"
-  },
-  {
-    "hanzi": "致函",
-    "pinyin": "zhìhán"
-  },
-  {
-    "hanzi": "自来",
-    "pinyin": "zìlái"
-  },
-  {
-    "hanzi": "足下",
-    "pinyin": "zúxià"
-  },
-  {
-    "hanzi": "参事",
-    "pinyin": "cānshì"
-  },
-  {
-    "hanzi": "产后",
-    "pinyin": "chǎnhòu"
-  },
-  {
     "hanzi": "沉睡",
     "pinyin": "chénshuì"
   },
@@ -38,6 +10,10 @@
   {
     "hanzi": "告示",
     "pinyin": "gàoshi"
+  },
+  {
+    "hanzi": "刮目相看",
+    "pinyin": NaN
   },
   {
     "hanzi": "静默",
@@ -100,7 +76,7 @@
     "pinyin": "nüèji"
   },
   {
-    "hanzi": "強者",
+    "hanzi": "强者",
     "pinyin": "qiángzhě"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "战区",
     "pinyin": "zhànqū"
+  },
+  {
+    "hanzi": "氨基酸",
+    "pinyin": "ānjīsuān"
+  },
+  {
+    "hanzi": "悲凉",
+    "pinyin": "bēiliáng"
+  },
+  {
+    "hanzi": "化身",
+    "pinyin": "huàshēn"
+  },
+  {
+    "hanzi": "火气",
+    "pinyin": "huǒqì"
+  },
+  {
+    "hanzi": "锦绣",
+    "pinyin": "jǐnxiù"
+  },
+  {
+    "hanzi": "军心",
+    "pinyin": "jūnxīn"
   }
 ]

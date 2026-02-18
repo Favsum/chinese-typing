@@ -1,37 +1,5 @@
 [
   {
-    "hanzi": "金发",
-    "pinyin": "jīnfà"
-  },
-  {
-    "hanzi": "救星",
-    "pinyin": "jiùxīng"
-  },
-  {
-    "hanzi": "枯死",
-    "pinyin": "kūsǐ"
-  },
-  {
-    "hanzi": "夸赞",
-    "pinyin": "kuāzàn"
-  },
-  {
-    "hanzi": "勒索",
-    "pinyin": "lèsuǒ"
-  },
-  {
-    "hanzi": "临危",
-    "pinyin": "línwēi"
-  },
-  {
-    "hanzi": "龙虾",
-    "pinyin": "lóngxiā"
-  },
-  {
-    "hanzi": "没问题",
-    "pinyin": "méiwèntí"
-  },
-  {
     "hanzi": "面额",
     "pinyin": "miàn'é"
   },
@@ -96,7 +64,7 @@
     "pinyin": "yíshī"
   },
   {
-    "hanzi": "隠含",
+    "hanzi": "隐含",
     "pinyin": "yǐnhán"
   },
   {
@@ -1492,7 +1460,7 @@
     "pinyin": "bùbèi"
   },
   {
-    "hanzi": "査禁",
+    "hanzi": "查禁",
     "pinyin": "chájìn"
   },
   {
@@ -1998,5 +1966,37 @@
   {
     "hanzi": "温床",
     "pinyin": "wēnchuáng"
+  },
+  {
+    "hanzi": "无地自容",
+    "pinyin": "wúdìzìróng"
+  },
+  {
+    "hanzi": "献艺",
+    "pinyin": "xiànyì"
+  },
+  {
+    "hanzi": "心衰",
+    "pinyin": "xīnshuāi"
+  },
+  {
+    "hanzi": "信使",
+    "pinyin": "xìnshǐ"
+  },
+  {
+    "hanzi": "眼红",
+    "pinyin": "yǎnhóng"
+  },
+  {
+    "hanzi": "腰肢",
+    "pinyin": "yāozhī"
+  },
+  {
+    "hanzi": "遗言",
+    "pinyin": "yíyán"
+  },
+  {
+    "hanzi": "油污",
+    "pinyin": "yóuwū"
   }
 ]

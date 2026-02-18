@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "职员",
-    "pinyin": "zhíyuán"
-  },
-  {
-    "hanzi": "而今",
-    "pinyin": "érjīn"
-  },
-  {
-    "hanzi": "出版物",
-    "pinyin": "chūbǎnwù"
-  },
-  {
-    "hanzi": "成才",
-    "pinyin": "chéngcái"
-  },
-  {
-    "hanzi": "专职",
-    "pinyin": "zhuānzhí"
-  },
-  {
-    "hanzi": "卧室",
-    "pinyin": "wòshì"
-  },
-  {
     "hanzi": "剧院",
     "pinyin": "jùyuàn"
   },
@@ -1056,6 +1032,10 @@
     "pinyin": "yóulǎn"
   },
   {
+    "hanzi": "名城",
+    "pinyin": "míngchéng"
+  },
+  {
     "hanzi": "蓝图",
     "pinyin": "lántú"
   },
@@ -1368,7 +1348,7 @@
     "pinyin": "bùlì"
   },
   {
-    "hanzi": "穏妥",
+    "hanzi": "稳妥",
     "pinyin": "wěntuǒ"
   },
   {
@@ -1998,5 +1978,25 @@
   {
     "hanzi": "谣言",
     "pinyin": "yáoyán"
+  },
+  {
+    "hanzi": "迷人",
+    "pinyin": "mírén"
+  },
+  {
+    "hanzi": "勤劳",
+    "pinyin": "qínláo"
+  },
+  {
+    "hanzi": "深沉",
+    "pinyin": "shēnchén"
+  },
+  {
+    "hanzi": "洽谈会",
+    "pinyin": "qiàtánhuì"
+  },
+  {
+    "hanzi": "二战",
+    "pinyin": "èrzhàn"
   }
 ]

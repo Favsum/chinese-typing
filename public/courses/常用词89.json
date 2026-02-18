@@ -1,13 +1,5 @@
 [
   {
-    "hanzi": "字库",
-    "pinyin": "zìkù"
-  },
-  {
-    "hanzi": "走步",
-    "pinyin": "zǒubù"
-  },
-  {
     "hanzi": "左膀右臂",
     "pinyin": "zuǒbǎngyòubì"
   },
@@ -1998,5 +1990,13 @@
   {
     "hanzi": "全份",
     "pinyin": "quánfèn"
+  },
+  {
+    "hanzi": "群众关系",
+    "pinyin": "qúnzhòngguānxì"
+  },
+  {
+    "hanzi": "仁义之师",
+    "pinyin": "rényìzhīshī"
   }
 ]

@@ -1,37 +1,5 @@
 [
   {
-    "hanzi": "编后",
-    "pinyin": "biānhòu"
-  },
-  {
-    "hanzi": "不依",
-    "pinyin": "bùyī"
-  },
-  {
-    "hanzi": "采暖",
-    "pinyin": "cǎinuǎn"
-  },
-  {
-    "hanzi": "赤裸",
-    "pinyin": "chìluǒ"
-  },
-  {
-    "hanzi": "炊事员",
-    "pinyin": "chuīshìyuán"
-  },
-  {
-    "hanzi": "搭档",
-    "pinyin": "dādàng"
-  },
-  {
-    "hanzi": "费解",
-    "pinyin": "fèijiě"
-  },
-  {
-    "hanzi": "高悬",
-    "pinyin": "gāoxuán"
-  },
-  {
     "hanzi": "革除",
     "pinyin": "géchú"
   },
@@ -980,10 +948,6 @@
     "pinyin": "huànwèi"
   },
   {
-    "hanzi": "罪不容诛",
-    "pinyin": "zuìbùróngzhū"
-  },
-  {
     "hanzi": "汇票",
     "pinyin": "huìpiào"
   },
@@ -1486,6 +1450,10 @@
   {
     "hanzi": "断层",
     "pinyin": "duàncéng"
+  },
+  {
+    "hanzi": "躲闪",
+    "pinyin": "duǒshǎn"
   },
   {
     "hanzi": "谷物",
@@ -1998,5 +1966,37 @@
   {
     "hanzi": "饲草",
     "pinyin": "sìcǎo"
+  },
+  {
+    "hanzi": "诵读",
+    "pinyin": "sòngdú"
+  },
+  {
+    "hanzi": "无神论",
+    "pinyin": "wúshénlùn"
+  },
+  {
+    "hanzi": "现实性",
+    "pinyin": "xiànshíxìng"
+  },
+  {
+    "hanzi": "乡民",
+    "pinyin": "xiāngmín"
+  },
+  {
+    "hanzi": "响彻",
+    "pinyin": "xiǎngchè"
+  },
+  {
+    "hanzi": "檐下",
+    "pinyin": "yánxià"
+  },
+  {
+    "hanzi": "远征",
+    "pinyin": "yuǎnzhēng"
+  },
+  {
+    "hanzi": "智商",
+    "pinyin": "zhìshāng"
   }
 ]

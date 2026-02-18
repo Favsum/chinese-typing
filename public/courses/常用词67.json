@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "春华秋实",
-    "pinyin": "chūnhuáqiūshí"
-  },
-  {
-    "hanzi": "大部头",
-    "pinyin": "dàbùtóu"
-  },
-  {
-    "hanzi": "大帽子",
-    "pinyin": "dàmàozi"
-  },
-  {
-    "hanzi": "单色",
-    "pinyin": "dānsè"
-  },
-  {
-    "hanzi": "稻穗",
-    "pinyin": "dàosuì"
-  },
-  {
-    "hanzi": "癫狂",
-    "pinyin": "diānkuáng"
-  },
-  {
     "hanzi": "知恩图报",
     "pinyin": "zhī'ēntúbào"
   },
@@ -1676,7 +1652,7 @@
     "pinyin": "xiédài"
   },
   {
-    "hanzi": "卸載",
+    "hanzi": "卸载",
     "pinyin": "xièzài"
   },
   {
@@ -1728,7 +1704,7 @@
     "pinyin": "yěyíng"
   },
   {
-    "hanzi": "姨子",
+    "hanzi": "胰子",
     "pinyin": "yízi"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "高架桥",
     "pinyin": "gāojiàqiáo"
+  },
+  {
+    "hanzi": "告竣",
+    "pinyin": "gàojùn"
+  },
+  {
+    "hanzi": "根本法",
+    "pinyin": "gēnběnfǎ"
+  },
+  {
+    "hanzi": "耿耿",
+    "pinyin": "gěnggěng"
+  },
+  {
+    "hanzi": "己所不欲，勿施于人",
+    "pinyin": "jǐsuǒbùyù,wùshīyúrén"
+  },
+  {
+    "hanzi": "谷雨",
+    "pinyin": "gǔyǔ"
+  },
+  {
+    "hanzi": "官署",
+    "pinyin": "guānshǔ"
   }
 ]

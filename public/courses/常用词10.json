@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "防护",
-    "pinyin": "fánghù"
-  },
-  {
-    "hanzi": "数额",
-    "pinyin": "shù'é"
-  },
-  {
-    "hanzi": "职位",
-    "pinyin": "zhíwèi"
-  },
-  {
-    "hanzi": "电报",
-    "pinyin": "diànbào"
-  },
-  {
-    "hanzi": "黄土",
-    "pinyin": "huángtǔ"
-  },
-  {
-    "hanzi": "那儿",
-    "pinyin": "nàr"
-  },
-  {
     "hanzi": "责任人",
     "pinyin": "zérènrén"
   },
@@ -1180,7 +1156,7 @@
     "pinyin": "guàpái"
   },
   {
-    "hanzi": "攻堅",
+    "hanzi": "攻坚",
     "pinyin": "gōngjiān"
   },
   {
@@ -1984,7 +1960,7 @@
     "pinyin": "fēngē"
   },
   {
-    "hanzi": "当晩",
+    "hanzi": "当晚",
     "pinyin": "dàngwǎn"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "太阳能",
     "pinyin": "tàiyángnéng"
+  },
+  {
+    "hanzi": "青年人",
+    "pinyin": "qīngniánrén"
+  },
+  {
+    "hanzi": "西瓜",
+    "pinyin": "xīguā"
+  },
+  {
+    "hanzi": "不忍",
+    "pinyin": "bùrěn"
+  },
+  {
+    "hanzi": "透明度",
+    "pinyin": "tòumíngdù"
+  },
+  {
+    "hanzi": "播放",
+    "pinyin": "bōfàng"
+  },
+  {
+    "hanzi": "强行",
+    "pinyin": "qiángxíng"
   }
 ]

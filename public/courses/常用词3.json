@@ -1,13 +1,5 @@
 [
   {
-    "hanzi": "上述",
-    "pinyin": "shàngshù"
-  },
-  {
-    "hanzi": "担任",
-    "pinyin": "dānrèn"
-  },
-  {
     "hanzi": "污染",
     "pinyin": "wūrǎn"
   },
@@ -832,10 +824,6 @@
     "pinyin": "qiánlái"
   },
   {
-    "hanzi": "躲闪",
-    "pinyin": "duǒshǎn"
-  },
-  {
     "hanzi": "例如",
     "pinyin": "lìrú"
   },
@@ -982,10 +970,6 @@
   {
     "hanzi": "风险",
     "pinyin": "fēngxiǎn"
-  },
-  {
-    "hanzi": "前前后后",
-    "pinyin": "qiánqiánhòuhòu"
   },
   {
     "hanzi": "牺牲",
@@ -1998,5 +1982,21 @@
   {
     "hanzi": "教训",
     "pinyin": "jiàoxùn"
+  },
+  {
+    "hanzi": "古代",
+    "pinyin": "gǔdài"
+  },
+  {
+    "hanzi": "等于",
+    "pinyin": "děngyú"
+  },
+  {
+    "hanzi": "等待",
+    "pinyin": "děngdài"
+  },
+  {
+    "hanzi": "一行",
+    "pinyin": "yīxíng"
   }
 ]

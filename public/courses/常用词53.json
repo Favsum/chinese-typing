@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "风餐露宿",
-    "pinyin": "fēngcānlùsù"
-  },
-  {
-    "hanzi": "干渠",
-    "pinyin": "gànqú"
-  },
-  {
-    "hanzi": "古兰经",
-    "pinyin": "gǔlánjīng"
-  },
-  {
-    "hanzi": "花哨",
-    "pinyin": "huāshao"
-  },
-  {
-    "hanzi": "不声不响",
-    "pinyin": "bùshēngbùxiǎng"
-  },
-  {
-    "hanzi": "华里",
-    "pinyin": "huálǐ"
-  },
-  {
-    "hanzi": "酱菜",
-    "pinyin": "jiàngcài"
-  },
-  {
     "hanzi": "苦熬",
     "pinyin": "kǔ'áo"
   },
@@ -1340,7 +1312,7 @@
     "pinyin": "sǐshuǐ"
   },
   {
-    "hanzi": "粛反",
+    "hanzi": "肃反",
     "pinyin": "sùfǎn"
   },
   {
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "枯水",
     "pinyin": "kūshuǐ"
+  },
+  {
+    "hanzi": "苦口",
+    "pinyin": "kǔkǒu"
+  },
+  {
+    "hanzi": "历险",
+    "pinyin": "lìxiǎn"
+  },
+  {
+    "hanzi": "驾龄",
+    "pinyin": "jiàlíng"
+  },
+  {
+    "hanzi": "门庭",
+    "pinyin": "méntíng"
+  },
+  {
+    "hanzi": "乃至于",
+    "pinyin": "nǎizhìyú"
+  },
+  {
+    "hanzi": "扭秧歌",
+    "pinyin": "niǔyāngge"
+  },
+  {
+    "hanzi": "农贷",
+    "pinyin": "nóngdài"
   }
 ]

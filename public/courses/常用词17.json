@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "学士",
-    "pinyin": "xuéshì"
-  },
-  {
-    "hanzi": "照着",
-    "pinyin": "zhàozhe"
-  },
-  {
-    "hanzi": "邦交",
-    "pinyin": "bāngjiāo"
-  },
-  {
-    "hanzi": "不敌",
-    "pinyin": "bùdí"
-  },
-  {
-    "hanzi": "长短",
-    "pinyin": "chángduǎn"
-  },
-  {
-    "hanzi": "大象",
-    "pinyin": "dàxiàng"
-  },
-  {
     "hanzi": "短波",
     "pinyin": "duǎnbō"
   },
@@ -1224,7 +1200,7 @@
     "pinyin": "bīnglěng"
   },
   {
-    "hanzi": "企穏",
+    "hanzi": "企稳",
     "pinyin": "qǐwěn"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "蕴含",
     "pinyin": "yùnhán"
+  },
+  {
+    "hanzi": "召回",
+    "pinyin": "zhàohuí"
+  },
+  {
+    "hanzi": "潜艇",
+    "pinyin": "qiántǐng"
+  },
+  {
+    "hanzi": "无心",
+    "pinyin": "wúxīn"
+  },
+  {
+    "hanzi": "逼人",
+    "pinyin": "bīrén"
+  },
+  {
+    "hanzi": "濒临",
+    "pinyin": "bīnlín"
+  },
+  {
+    "hanzi": "户外",
+    "pinyin": "hùwài"
   }
 ]

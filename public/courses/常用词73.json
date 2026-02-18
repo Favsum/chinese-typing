@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "复课",
-    "pinyin": "fùkè"
-  },
-  {
-    "hanzi": "复评",
-    "pinyin": "fùpíng"
-  },
-  {
-    "hanzi": "腹稿",
-    "pinyin": "fùgǎo"
-  },
-  {
-    "hanzi": "概貌",
-    "pinyin": "gàimào"
-  },
-  {
-    "hanzi": "擀面杖",
-    "pinyin": "gǎnmiànzhàng"
-  },
-  {
-    "hanzi": "公爹",
-    "pinyin": "gōngdiē"
-  },
-  {
     "hanzi": "恭请",
     "pinyin": "gōngqǐng"
   },
@@ -1392,7 +1368,7 @@
     "pinyin": "yǐnshuǐsīyuán"
   },
   {
-    "hanzi": "隠逸",
+    "hanzi": "隐逸",
     "pinyin": "yǐnyì"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "缱绻",
     "pinyin": "qiǎnquǎn"
+  },
+  {
+    "hanzi": "枪伤",
+    "pinyin": "qiāngshāng"
+  },
+  {
+    "hanzi": "青梅",
+    "pinyin": "qīngméi"
+  },
+  {
+    "hanzi": "轻狂",
+    "pinyin": "qīngkuáng"
+  },
+  {
+    "hanzi": "请赏",
+    "pinyin": "qǐngshǎng"
+  },
+  {
+    "hanzi": "全本",
+    "pinyin": "quánběn"
+  },
+  {
+    "hanzi": "三角恋爱",
+    "pinyin": "sānjiǎoliàn'ài"
   }
 ]

@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "氨基酸",
-    "pinyin": "ānjīsuān"
-  },
-  {
-    "hanzi": "悲凉",
-    "pinyin": "bēiliáng"
-  },
-  {
-    "hanzi": "化身",
-    "pinyin": "huàshēn"
-  },
-  {
-    "hanzi": "火气",
-    "pinyin": "huǒqì"
-  },
-  {
-    "hanzi": "锦绣",
-    "pinyin": "jǐnxiù"
-  },
-  {
-    "hanzi": "军心",
-    "pinyin": "jūnxīn"
-  },
-  {
     "hanzi": "宽裕",
     "pinyin": "kuānyù"
   },
@@ -1652,10 +1628,6 @@
     "pinyin": "mànbùjīngxīn"
   },
   {
-    "hanzi": "轻软",
-    "pinyin": "qīngruǎn"
-  },
-  {
     "hanzi": "锐减",
     "pinyin": "ruìjiǎn"
   },
@@ -1900,7 +1872,7 @@
     "pinyin": "xióngfēng"
   },
   {
-    "hanzi": "追査",
+    "hanzi": "追查",
     "pinyin": "zhuīchá"
   },
   {
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "村头",
     "pinyin": "cūntóu"
+  },
+  {
+    "hanzi": "大刀阔斧",
+    "pinyin": "dàdāokuòfǔ"
+  },
+  {
+    "hanzi": "大王",
+    "pinyin": "dàwáng"
+  },
+  {
+    "hanzi": "大戏",
+    "pinyin": "dàxì"
+  },
+  {
+    "hanzi": "滴水",
+    "pinyin": "dīshuǐ"
+  },
+  {
+    "hanzi": "叮咛",
+    "pinyin": "dīngníng"
+  },
+  {
+    "hanzi": "高下",
+    "pinyin": "gāoxià"
+  },
+  {
+    "hanzi": "行当",
+    "pinyin": "hángdang"
   }
 ]

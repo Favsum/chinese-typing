@@ -1,25 +1,5 @@
 [
   {
-    "hanzi": "废止",
-    "pinyin": "fèizhǐ"
-  },
-  {
-    "hanzi": "好日子",
-    "pinyin": "hǎorìzi"
-  },
-  {
-    "hanzi": "合乎",
-    "pinyin": "héhū"
-  },
-  {
-    "hanzi": "艺术品",
-    "pinyin": "yìshùpǐn"
-  },
-  {
-    "hanzi": "议政",
-    "pinyin": "yìzhèng"
-  },
-  {
     "hanzi": "创刊",
     "pinyin": "chuàngkān"
   },
@@ -1204,10 +1184,6 @@
     "pinyin": "mànbù"
   },
   {
-    "hanzi": "同床异梦",
-    "pinyin": "tóngchuángyìmèng"
-  },
-  {
     "hanzi": "通货膨胀",
     "pinyin": "tōnghuòpéngzhàng"
   },
@@ -1680,7 +1656,7 @@
     "pinyin": "gāisǐ"
   },
   {
-    "hanzi": "坎珂",
+    "hanzi": "坎坷",
     "pinyin": "kǎnkě"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "现今",
     "pinyin": "xiànjīn"
+  },
+  {
+    "hanzi": "学士",
+    "pinyin": "xuéshì"
+  },
+  {
+    "hanzi": "照着",
+    "pinyin": "zhàozhe"
+  },
+  {
+    "hanzi": "邦交",
+    "pinyin": "bāngjiāo"
+  },
+  {
+    "hanzi": "不敌",
+    "pinyin": "bùdí"
+  },
+  {
+    "hanzi": "长短",
+    "pinyin": "chángduǎn"
+  },
+  {
+    "hanzi": "大象",
+    "pinyin": "dàxiàng"
   }
 ]

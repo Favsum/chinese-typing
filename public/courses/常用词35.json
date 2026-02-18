@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "闭合",
-    "pinyin": "bìhé"
-  },
-  {
-    "hanzi": "变种",
-    "pinyin": "biànzhǒng"
-  },
-  {
-    "hanzi": "博爱",
-    "pinyin": "bó'ài"
-  },
-  {
-    "hanzi": "车水马龙",
-    "pinyin": "chēshuǐmǎlóng"
-  },
-  {
-    "hanzi": "城运会",
-    "pinyin": "chéngyùnhuì"
-  },
-  {
-    "hanzi": "大葱",
-    "pinyin": "dàcōng"
-  },
-  {
-    "hanzi": "法典",
-    "pinyin": "fǎdiǎn"
-  },
-  {
     "hanzi": "分社",
     "pinyin": "fēnshè"
   },
@@ -564,7 +536,7 @@
     "pinyin": "yěrén"
   },
   {
-    "hanzi": "隠性",
+    "hanzi": "隐性",
     "pinyin": "yǐnxìng"
   },
   {
@@ -670,10 +642,6 @@
   {
     "hanzi": "排场",
     "pinyin": "páichǎng"
-  },
-  {
-    "hanzi": "女优",
-    "pinyin": "nǚyōu"
   },
   {
     "hanzi": "牌楼",
@@ -1998,5 +1966,37 @@
   {
     "hanzi": "过意不去",
     "pinyin": "guòyìbùqù"
+  },
+  {
+    "hanzi": "海盗",
+    "pinyin": "hǎidào"
+  },
+  {
+    "hanzi": "耗尽",
+    "pinyin": "hàojìn"
+  },
+  {
+    "hanzi": "合办",
+    "pinyin": "hébàn"
+  },
+  {
+    "hanzi": "候车室",
+    "pinyin": "hòuchēshì"
+  },
+  {
+    "hanzi": "坏话",
+    "pinyin": "huàihuà"
+  },
+  {
+    "hanzi": "幻影",
+    "pinyin": "huànyǐng"
+  },
+  {
+    "hanzi": "据实",
+    "pinyin": "jùshí"
+  },
+  {
+    "hanzi": "灵动",
+    "pinyin": "língdòng"
   }
 ]

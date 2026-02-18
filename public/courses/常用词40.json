@@ -1,37 +1,5 @@
 [
   {
-    "hanzi": "无地自容",
-    "pinyin": "wúdìzìróng"
-  },
-  {
-    "hanzi": "献艺",
-    "pinyin": "xiànyì"
-  },
-  {
-    "hanzi": "心衰",
-    "pinyin": "xīnshuāi"
-  },
-  {
-    "hanzi": "信使",
-    "pinyin": "xìnshǐ"
-  },
-  {
-    "hanzi": "眼红",
-    "pinyin": "yǎnhóng"
-  },
-  {
-    "hanzi": "腰肢",
-    "pinyin": "yāozhī"
-  },
-  {
-    "hanzi": "遗言",
-    "pinyin": "yíyán"
-  },
-  {
-    "hanzi": "油污",
-    "pinyin": "yóuwū"
-  },
-  {
     "hanzi": "鱼水",
     "pinyin": "yúshuǐ"
   },
@@ -406,6 +374,10 @@
   {
     "hanzi": "通体",
     "pinyin": "tōngtǐ"
+  },
+  {
+    "hanzi": "通通",
+    "pinyin": "tōngtōng"
   },
   {
     "hanzi": "统一体",
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "吃不上",
     "pinyin": "chībushàng"
+  },
+  {
+    "hanzi": "初五",
+    "pinyin": "chūwǔ"
+  },
+  {
+    "hanzi": "辞别",
+    "pinyin": "cíbié"
+  },
+  {
+    "hanzi": "倒行逆施",
+    "pinyin": "dàoxíngnìshī"
+  },
+  {
+    "hanzi": "丁香",
+    "pinyin": "dīngxiāng"
+  },
+  {
+    "hanzi": "发车",
+    "pinyin": "fāchē"
+  },
+  {
+    "hanzi": "防不胜防",
+    "pinyin": "fángbùshèngfáng"
+  },
+  {
+    "hanzi": "房檐",
+    "pinyin": "fángyán"
   }
 ]

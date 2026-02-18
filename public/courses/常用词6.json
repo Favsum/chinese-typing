@@ -1,21 +1,5 @@
 [
   {
-    "hanzi": "装置",
-    "pinyin": "zhuāngzhì"
-  },
-  {
-    "hanzi": "专用",
-    "pinyin": "zhuānyòng"
-  },
-  {
-    "hanzi": "钢铁",
-    "pinyin": "gāngtiě"
-  },
-  {
-    "hanzi": "共产主义",
-    "pinyin": "gòngchǎnzhǔyì"
-  },
-  {
     "hanzi": "私人",
     "pinyin": "sīrén"
   },
@@ -748,7 +732,7 @@
     "pinyin": "suǒdé"
   },
   {
-    "hanzi": "燃焼",
+    "hanzi": "燃烧",
     "pinyin": "ránshāo"
   },
   {
@@ -1998,5 +1982,21 @@
   {
     "hanzi": "优美",
     "pinyin": "yōuměi"
+  },
+  {
+    "hanzi": "整整",
+    "pinyin": "zhěngzhěng"
+  },
+  {
+    "hanzi": "天然气",
+    "pinyin": "tiānránqì"
+  },
+  {
+    "hanzi": "替代",
+    "pinyin": "tìdài"
+  },
+  {
+    "hanzi": "供给",
+    "pinyin": "gōngjǐ"
   }
 ]

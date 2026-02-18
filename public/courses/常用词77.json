@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "妻弟",
-    "pinyin": "qīdì"
-  },
-  {
-    "hanzi": "欺瞒",
-    "pinyin": "qīmán"
-  },
-  {
-    "hanzi": "漆画",
-    "pinyin": "qīhuà"
-  },
-  {
-    "hanzi": "奇趣",
-    "pinyin": "qíqù"
-  },
-  {
-    "hanzi": "铅印",
-    "pinyin": "qiānyìn"
-  },
-  {
-    "hanzi": "强弩之末",
-    "pinyin": "qiángnǔzhīmò"
-  },
-  {
     "hanzi": "强辩",
     "pinyin": "qiǎngbiàn"
   },
@@ -344,7 +320,7 @@
     "pinyin": "bǎnshū"
   },
   {
-    "hanzi": "幇厨",
+    "hanzi": "帮厨",
     "pinyin": "bāngchú"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "夜长梦多",
     "pinyin": "yèchángmèngduō"
+  },
+  {
+    "hanzi": "一半天",
+    "pinyin": "yībàntiān"
+  },
+  {
+    "hanzi": "一了百了",
+    "pinyin": "yīliǎobǎiliǎo"
+  },
+  {
+    "hanzi": "医士",
+    "pinyin": "yīshì"
+  },
+  {
+    "hanzi": "遗传因子",
+    "pinyin": "yíchuányīnzǐ"
+  },
+  {
+    "hanzi": "以防不测",
+    "pinyin": "yǐfángbùcè"
+  },
+  {
+    "hanzi": "以防万一",
+    "pinyin": "yǐfángwànyī"
   }
 ]

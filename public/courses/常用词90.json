@@ -1,13 +1,5 @@
 [
   {
-    "hanzi": "群众关系",
-    "pinyin": "qúnzhòngguānxì"
-  },
-  {
-    "hanzi": "仁义之师",
-    "pinyin": "rényìzhīshī"
-  },
-  {
     "hanzi": "日薄西山",
     "pinyin": "rìbóxīshān"
   },
@@ -640,7 +632,7 @@
     "pinyin": "cūyǎ"
   },
   {
-    "hanzi": "挫子",
+    "hanzi": "矬子",
     "pinyin": "cuózi"
   },
   {
@@ -1998,5 +1990,13 @@
   {
     "hanzi": "鬼打墙",
     "pinyin": "guǐdǎqiáng"
+  },
+  {
+    "hanzi": "憨实",
+    "pinyin": "hānshi"
+  },
+  {
+    "hanzi": "航拍",
+    "pinyin": "hángpāi"
   }
 ]

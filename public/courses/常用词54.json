@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "苦口",
-    "pinyin": "kǔkǒu"
-  },
-  {
-    "hanzi": "历险",
-    "pinyin": "lìxiǎn"
-  },
-  {
-    "hanzi": "驾龄",
-    "pinyin": "jiàlíng"
-  },
-  {
-    "hanzi": "门庭",
-    "pinyin": "méntíng"
-  },
-  {
-    "hanzi": "乃至于",
-    "pinyin": "nǎizhìyú"
-  },
-  {
-    "hanzi": "扭秧歌",
-    "pinyin": "niǔyāngge"
-  },
-  {
-    "hanzi": "农贷",
-    "pinyin": "nóngdài"
-  },
-  {
     "hanzi": "排山倒海",
     "pinyin": "páishāndǎohǎi"
   },
@@ -1144,7 +1116,7 @@
     "pinyin": "gāowěidù"
   },
   {
-    "hanzi": "蒿子",
+    "hanzi": "篙子",
     "pinyin": "gāozi"
   },
   {
@@ -1468,7 +1440,7 @@
     "pinyin": "cǎipái"
   },
   {
-    "hanzi": "査勘",
+    "hanzi": "查勘",
     "pinyin": "chákān"
   },
   {
@@ -1998,5 +1970,33 @@
   {
     "hanzi": "火眼金睛",
     "pinyin": "huǒyǎnjīnjīng"
+  },
+  {
+    "hanzi": "戛然",
+    "pinyin": "jiárán"
+  },
+  {
+    "hanzi": "假想",
+    "pinyin": "jiǎxiǎng"
+  },
+  {
+    "hanzi": "肩并肩",
+    "pinyin": "jiānbìngjiān"
+  },
+  {
+    "hanzi": "健忘",
+    "pinyin": "jiànwàng"
+  },
+  {
+    "hanzi": "矫治",
+    "pinyin": "jiǎozhì"
+  },
+  {
+    "hanzi": "嫖宿",
+    "pinyin": "piáosù"
+  },
+  {
+    "hanzi": "搅和",
+    "pinyin": "jiǎohuo"
   }
 ]

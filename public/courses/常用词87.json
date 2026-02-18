@@ -1,21 +1,5 @@
 [
   {
-    "hanzi": "认负",
-    "pinyin": "rènfù"
-  },
-  {
-    "hanzi": "日托",
-    "pinyin": "rìtuō"
-  },
-  {
-    "hanzi": "乳猪",
-    "pinyin": "rǔzhū"
-  },
-  {
-    "hanzi": "傻大黑粗",
-    "pinyin": "shǎdàhēicū"
-  },
-  {
     "hanzi": "傻里傻气",
     "pinyin": "shǎlishǎqì"
   },
@@ -1044,6 +1028,10 @@
     "pinyin": "lìnsèguǐ"
   },
   {
+    "hanzi": "溜号",
+    "pinyin": "liūhào"
+  },
+  {
     "hanzi": "柳梢",
     "pinyin": "liǔshāo"
   },
@@ -1764,7 +1752,7 @@
     "pinyin": "biànpén"
   },
   {
-    "hanzi": "冰碴",
+    "hanzi": "冰碴儿",
     "pinyin": "bīngchár"
   },
   {
@@ -1822,6 +1810,10 @@
   {
     "hanzi": "仇隙",
     "pinyin": "chóuxì"
+  },
+  {
+    "hanzi": "臭名远扬",
+    "pinyin": "chòumíngyuǎnyáng"
   },
   {
     "hanzi": "处身",
@@ -1998,5 +1990,13 @@
   {
     "hanzi": "根绝",
     "pinyin": "gēnjué"
+  },
+  {
+    "hanzi": "够本",
+    "pinyin": "gòuběn"
+  },
+  {
+    "hanzi": "古道热肠",
+    "pinyin": "gǔdàorècháng"
   }
 ]

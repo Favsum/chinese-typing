@@ -1,33 +1,5 @@
 [
   {
-    "hanzi": "大刀阔斧",
-    "pinyin": "dàdāokuòfǔ"
-  },
-  {
-    "hanzi": "大王",
-    "pinyin": "dàwáng"
-  },
-  {
-    "hanzi": "大戏",
-    "pinyin": "dàxì"
-  },
-  {
-    "hanzi": "滴水",
-    "pinyin": "dīshuǐ"
-  },
-  {
-    "hanzi": "叮咛",
-    "pinyin": "dīngníng"
-  },
-  {
-    "hanzi": "高下",
-    "pinyin": "gāoxià"
-  },
-  {
-    "hanzi": "行当",
-    "pinyin": "hángdang"
-  },
-  {
     "hanzi": "积水",
     "pinyin": "jīshuǐ"
   },
@@ -714,10 +686,6 @@
   {
     "hanzi": "快车道",
     "pinyin": "kuàichēdào"
-  },
-  {
-    "hanzi": "溜号",
-    "pinyin": "liūhào"
   },
   {
     "hanzi": "缭绕",
@@ -1998,5 +1966,37 @@
   {
     "hanzi": "富二代",
     "pinyin": "fù'èrdài"
+  },
+  {
+    "hanzi": "深入浅出",
+    "pinyin": "shēnrùqiǎnchū"
+  },
+  {
+    "hanzi": "巍峨",
+    "pinyin": "wēi'é"
+  },
+  {
+    "hanzi": "五四运动",
+    "pinyin": "wǔsìyùndòng"
+  },
+  {
+    "hanzi": "车友",
+    "pinyin": "chēyǒu"
+  },
+  {
+    "hanzi": "新生儿",
+    "pinyin": "xīnshēng'ér"
+  },
+  {
+    "hanzi": "雄心",
+    "pinyin": "xióngxīn"
+  },
+  {
+    "hanzi": "真个",
+    "pinyin": "zhēngè"
+  },
+  {
+    "hanzi": "布鞋",
+    "pinyin": "bùxié"
   }
 ]

@@ -1,37 +1,5 @@
 [
   {
-    "hanzi": "裂开",
-    "pinyin": "lièkāi"
-  },
-  {
-    "hanzi": "麦收",
-    "pinyin": "màishōu"
-  },
-  {
-    "hanzi": "南朝",
-    "pinyin": "náncháo"
-  },
-  {
-    "hanzi": "上半时",
-    "pinyin": "shàngbànshí"
-  },
-  {
-    "hanzi": "尚待",
-    "pinyin": "shàngdài"
-  },
-  {
-    "hanzi": "少许",
-    "pinyin": "shǎoxǔ"
-  },
-  {
-    "hanzi": "跳台",
-    "pinyin": "tiàotái"
-  },
-  {
-    "hanzi": "萧萧",
-    "pinyin": "xiāoxiāo"
-  },
-  {
     "hanzi": "效忠",
     "pinyin": "xiàozhōng"
   },
@@ -648,7 +616,7 @@
     "pinyin": "yīxiǔ"
   },
   {
-    "hanzi": "隠形",
+    "hanzi": "隐形",
     "pinyin": "yǐnxíng"
   },
   {
@@ -1294,6 +1262,10 @@
   {
     "hanzi": "走险",
     "pinyin": "zǒuxiǎn"
+  },
+  {
+    "hanzi": "阿Q",
+    "pinyin": "āQ"
   },
   {
     "hanzi": "班机",
@@ -1956,7 +1928,7 @@
     "pinyin": "qíngmiàn"
   },
   {
-    "hanzi": "取祥",
+    "hanzi": "取样",
     "pinyin": "qǔyàng"
   },
   {
@@ -1994,5 +1966,37 @@
   {
     "hanzi": "责任事故",
     "pinyin": "zérènshìgù"
+  },
+  {
+    "hanzi": "月供",
+    "pinyin": "yuègōng"
+  },
+  {
+    "hanzi": "正巧",
+    "pinyin": "zhèngqiǎo"
+  },
+  {
+    "hanzi": "冰天雪地",
+    "pinyin": "bīngtiānxuědì"
+  },
+  {
+    "hanzi": "草药",
+    "pinyin": "cǎoyào"
+  },
+  {
+    "hanzi": "侗族",
+    "pinyin": "dòngzú"
+  },
+  {
+    "hanzi": "对立面",
+    "pinyin": "duìlìmiàn"
+  },
+  {
+    "hanzi": "改选",
+    "pinyin": "gǎixuǎn"
+  },
+  {
+    "hanzi": "刚强",
+    "pinyin": "gāngqiáng"
   }
 ]

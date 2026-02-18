@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "召回",
-    "pinyin": "zhàohuí"
-  },
-  {
-    "hanzi": "潜艇",
-    "pinyin": "qiántǐng"
-  },
-  {
-    "hanzi": "无心",
-    "pinyin": "wúxīn"
-  },
-  {
-    "hanzi": "逼人",
-    "pinyin": "bīrén"
-  },
-  {
-    "hanzi": "濒临",
-    "pinyin": "bīnlín"
-  },
-  {
-    "hanzi": "户外",
-    "pinyin": "hùwài"
-  },
-  {
     "hanzi": "加油",
     "pinyin": "jiāyóu"
   },
@@ -1744,7 +1720,7 @@
     "pinyin": "gèyì"
   },
   {
-    "hanzi": "喚醒",
+    "hanzi": "唤醒",
     "pinyin": "huànxǐng"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "停电",
     "pinyin": "tíngdiàn"
+  },
+  {
+    "hanzi": "无端",
+    "pinyin": "wúduān"
+  },
+  {
+    "hanzi": "池塘",
+    "pinyin": "chítáng"
+  },
+  {
+    "hanzi": "督察",
+    "pinyin": "dūchá"
+  },
+  {
+    "hanzi": "辅导员",
+    "pinyin": "fǔdǎoyuán"
+  },
+  {
+    "hanzi": "呼啸",
+    "pinyin": "hūxiào"
+  },
+  {
+    "hanzi": "清静",
+    "pinyin": "qīngjìng"
   }
 ]

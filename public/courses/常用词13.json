@@ -1,25 +1,5 @@
 [
   {
-    "hanzi": "迷人",
-    "pinyin": "mírén"
-  },
-  {
-    "hanzi": "勤劳",
-    "pinyin": "qínláo"
-  },
-  {
-    "hanzi": "深沉",
-    "pinyin": "shēnchén"
-  },
-  {
-    "hanzi": "洽谈会",
-    "pinyin": "qiàtánhuì"
-  },
-  {
-    "hanzi": "二战",
-    "pinyin": "èrzhàn"
-  },
-  {
     "hanzi": "逃走",
     "pinyin": "táozǒu"
   },
@@ -396,7 +376,7 @@
     "pinyin": "tǐzhì"
   },
   {
-    "hanzi": "晩年",
+    "hanzi": "晚年",
     "pinyin": "wǎnnián"
   },
   {
@@ -1998,5 +1978,25 @@
   {
     "hanzi": "上场",
     "pinyin": "shàngchǎng"
+  },
+  {
+    "hanzi": "奔赴",
+    "pinyin": "bēnfù"
+  },
+  {
+    "hanzi": "捕捉",
+    "pinyin": "bǔzhuō"
+  },
+  {
+    "hanzi": "录用",
+    "pinyin": "lùyòng"
+  },
+  {
+    "hanzi": "手工",
+    "pinyin": "shǒugōng"
+  },
+  {
+    "hanzi": "急切",
+    "pinyin": "jíqiè"
   }
 ]

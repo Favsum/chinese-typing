@@ -1,5 +1,9 @@
 [
   {
+    "hanzi": "掉书袋",
+    "pinyin": "diàoshūdài"
+  },
+  {
     "hanzi": "丁字形",
     "pinyin": "dīngzìxíng"
   },
@@ -1080,7 +1084,7 @@
     "pinyin": "xiǎoshì"
   },
   {
-    "hanzi": "暁事",
+    "hanzi": "晓事",
     "pinyin": "xiǎoshì"
   },
   {
@@ -1994,9 +1998,5 @@
   {
     "hanzi": "捡便宜",
     "pinyin": "jiǎnpiányi"
-  },
-  {
-    "hanzi": "见阎王",
-    "pinyin": "jiànyánwang"
   }
 ]

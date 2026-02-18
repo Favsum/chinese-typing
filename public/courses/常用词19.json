@@ -1,29 +1,5 @@
 [
   {
-    "hanzi": "无端",
-    "pinyin": "wúduān"
-  },
-  {
-    "hanzi": "池塘",
-    "pinyin": "chítáng"
-  },
-  {
-    "hanzi": "督察",
-    "pinyin": "dūchá"
-  },
-  {
-    "hanzi": "辅导员",
-    "pinyin": "fǔdǎoyuán"
-  },
-  {
-    "hanzi": "呼啸",
-    "pinyin": "hūxiào"
-  },
-  {
-    "hanzi": "清静",
-    "pinyin": "qīngjìng"
-  },
-  {
     "hanzi": "爽快",
     "pinyin": "shuǎngkuai"
   },
@@ -368,7 +344,7 @@
     "pinyin": "jūnfēnqū"
   },
   {
-    "hanzi": "搜査",
+    "hanzi": "搜查",
     "pinyin": "sōuchá"
   },
   {
@@ -1998,5 +1974,29 @@
   {
     "hanzi": "建筑业",
     "pinyin": "jiànzhùyè"
+  },
+  {
+    "hanzi": "降温",
+    "pinyin": "jiàngwēn"
+  },
+  {
+    "hanzi": "微小",
+    "pinyin": "wēixiǎo"
+  },
+  {
+    "hanzi": "召见",
+    "pinyin": "zhàojiàn"
+  },
+  {
+    "hanzi": "工作站",
+    "pinyin": "gōngzuòzhàn"
+  },
+  {
+    "hanzi": "集体主义",
+    "pinyin": "jítǐzhǔyì"
+  },
+  {
+    "hanzi": "建构",
+    "pinyin": "jiàngòu"
   }
 ]

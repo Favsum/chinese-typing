@@ -1,37 +1,5 @@
 [
   {
-    "hanzi": "深入浅出",
-    "pinyin": "shēnrùqiǎnchū"
-  },
-  {
-    "hanzi": "巍峨",
-    "pinyin": "wēi'é"
-  },
-  {
-    "hanzi": "五四运动",
-    "pinyin": "wǔsìyùndòng"
-  },
-  {
-    "hanzi": "车友",
-    "pinyin": "chēyǒu"
-  },
-  {
-    "hanzi": "新生儿",
-    "pinyin": "xīnshēng'ér"
-  },
-  {
-    "hanzi": "雄心",
-    "pinyin": "xióngxīn"
-  },
-  {
-    "hanzi": "真个",
-    "pinyin": "zhēngè"
-  },
-  {
-    "hanzi": "布鞋",
-    "pinyin": "bùxié"
-  },
-  {
     "hanzi": "扯皮",
     "pinyin": "chěpí"
   },
@@ -432,7 +400,7 @@
     "pinyin": "pínhán"
   },
   {
-    "hanzi": "強攻",
+    "hanzi": "强攻",
     "pinyin": "qiánggōng"
   },
   {
@@ -1998,5 +1966,37 @@
   {
     "hanzi": "白眼",
     "pinyin": "báiyǎn"
+  },
+  {
+    "hanzi": "变法",
+    "pinyin": "biànfǎ"
+  },
+  {
+    "hanzi": "藏匿",
+    "pinyin": "cángnì"
+  },
+  {
+    "hanzi": "成像",
+    "pinyin": "chéngxiàng"
+  },
+  {
+    "hanzi": "抽取",
+    "pinyin": "chōuqǔ"
+  },
+  {
+    "hanzi": "耷拉",
+    "pinyin": "dāla"
+  },
+  {
+    "hanzi": "典故",
+    "pinyin": "diǎngù"
+  },
+  {
+    "hanzi": "掉以轻心",
+    "pinyin": "diàoyǐqīngxīn"
+  },
+  {
+    "hanzi": "发红",
+    "pinyin": "fāhóng"
   }
 ]
