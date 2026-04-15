@@ -1,11 +1,10 @@
-
 export const GameStatus = {
   IDLE: 'IDLE',
   PLAYING: 'PLAYING',
-  FINISHED: 'FINISHED'
+  FINISHED: 'FINISHED',
 } as const;
 
-export type GameStatus = typeof GameStatus[keyof typeof GameStatus];
+export type GameStatus = (typeof GameStatus)[keyof typeof GameStatus];
 
 export interface TypingStats {
   wpm: number;
@@ -24,6 +23,17 @@ export interface CourseItem {
 export interface Course {
   id: string;
   name: string;
-  items: CourseItem[]; // Parsed content
-  rawContent: string;  // Original text for reference
+  items: CourseItem[];
+  rawContent: string;
+}
+
+export interface CourseManifestItem {
+  id: string;
+  index: number;
+  label: string;
+}
+
+export interface DifficultNote {
+  hanzi: string;
+  pinyin: string;
 }

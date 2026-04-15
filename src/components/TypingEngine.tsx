@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
-import { GameStatus, type TypingStats, type CourseItem } from '../types';
+import { GameStatus, type DifficultNote, type TypingStats, type CourseItem } from '../types';
 import { RefreshCcw, AlertCircle, ChevronRight, ChevronLeft } from 'lucide-react';
 
 interface TypingEngineProps {
@@ -10,9 +9,32 @@ interface TypingEngineProps {
   onFinish: (stats: TypingStats) => void;
   onRestart: () => void;
   setStats: (stats: TypingStats) => void;
+  onRecordDifficultItem: (note: DifficultNote) => void;
 }
 
 const ITEMS_PER_PAGE = 68;
+const TAB_DOUBLE_PRESS_MS = 300;
+
+const findPreviousCourseItem = (courseItems: CourseItem[], cursorPosition: number): CourseItem | null => {
+  if (cursorPosition <= 0) {
+    return null;
+  }
+
+  let cumulativeLength = 0;
+  let previousItem: CourseItem | null = null;
+
+  for (const item of courseItems) {
+    cumulativeLength += item.hanzi.length;
+    if (cumulativeLength <= cursorPosition) {
+      previousItem = item;
+      continue;
+    }
+
+    break;
+  }
+
+  return previousItem;
+};
 
 export const TypingEngine: React.FC<TypingEngineProps> = ({
   courseItems,
@@ -20,31 +42,28 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
   onStart,
   onFinish,
   onRestart,
-  setStats
+  setStats,
+  onRecordDifficultItem,
 }) => {
-  // State
   const [inputValue, setInputValue] = useState('');
   const [committedValue, setCommittedValue] = useState('');
-  
-  // Time tracking states
-  const [activeTimeMs, setActiveTimeMs] = useState(0); 
-  const lastTickRef = useRef<number | null>(null);
-  
-  const inputRef = useRef<HTMLInputElement>(null);
-  const activeCharRef = useRef<HTMLDivElement>(null);
+  const [activeTimeMs, setActiveTimeMs] = useState(0);
   const [isFocused, setIsFocused] = useState(true);
-  
   const [inputPos, setInputPos] = useState({ top: 0, left: 0 });
   const [currentPage, setCurrentPage] = useState(0);
-  const isComposing = useRef(false);
 
-  // Derived Data
+  const lastTickRef = useRef<number | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const activeCharRef = useRef<HTMLDivElement>(null);
+  const isComposing = useRef(false);
+  const lastTabPressRef = useRef(0);
+
   const totalPages = Math.ceil(courseItems.length / ITEMS_PER_PAGE);
   const currentItems = courseItems.slice(currentPage * ITEMS_PER_PAGE, (currentPage + 1) * ITEMS_PER_PAGE);
 
   const focusInput = useCallback(() => {
     if (gameStatus !== GameStatus.FINISHED && inputRef.current) {
-        inputRef.current.focus({ preventScroll: true });
+      inputRef.current.focus({ preventScroll: true });
     }
   }, [gameStatus]);
 
@@ -52,110 +71,111 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
     focusInput();
   }, [focusInput, currentPage]);
 
-  const handleContainerClick = () => {
-    focusInput();
-  };
-
   useLayoutEffect(() => {
     if (activeCharRef.current && inputRef.current) {
       const charEl = activeCharRef.current;
       setInputPos({
         top: charEl.offsetTop,
-        left: charEl.offsetLeft
+        left: charEl.offsetLeft,
       });
     }
   }, [committedValue, currentPage, isFocused]);
 
-  // Stats Calculation using accumulated activeTimeMs
-  const calculateStats = useCallback((currentActiveMs: number) => {
-    const durationSeconds = currentActiveMs / 1000;
-    const fullTargetText = courseItems.map(item => item.hanzi).join('');
-    
-    let correct = 0;
-    const minLen = Math.min(committedValue.length, fullTargetText.length);
-    for (let i = 0; i < minLen; i++) {
-      if (committedValue[i] === fullTargetText[i]) correct++;
-    }
+  const calculateStats = useCallback(
+    (currentActiveMs: number) => {
+      const durationSeconds = currentActiveMs / 1000;
+      const fullTargetText = courseItems.map((item) => item.hanzi).join('');
 
-    const accuracy = committedValue.length > 0 ? (correct / committedValue.length) * 100 : 100;
-    const wpm = durationSeconds > 0 ? (correct / durationSeconds) * 60 : 0;
+      let correct = 0;
+      const minLen = Math.min(committedValue.length, fullTargetText.length);
+      for (let i = 0; i < minLen; i++) {
+        if (committedValue[i] === fullTargetText[i]) correct++;
+      }
 
-    const currentStats: TypingStats = {
-      wpm: Math.round(wpm),
-      accuracy: Math.round(accuracy),
-      timeElapsed: Math.round(durationSeconds),
-      totalChars: committedValue.length,
-      correctChars: correct,
-      errors: committedValue.length - correct
-    };
+      const accuracy = committedValue.length > 0 ? (correct / committedValue.length) * 100 : 100;
+      const wpm = durationSeconds > 0 ? (correct / durationSeconds) * 60 : 0;
 
-    setStats(currentStats);
-    return currentStats;
-  }, [committedValue, courseItems, setStats]);
+      const currentStats: TypingStats = {
+        wpm: Math.round(wpm),
+        accuracy: Math.round(accuracy),
+        timeElapsed: Math.round(durationSeconds),
+        totalChars: committedValue.length,
+        correctChars: correct,
+        errors: committedValue.length - correct,
+      };
 
-  // Improved Timer with Pause support
+      setStats(currentStats);
+      return currentStats;
+    },
+    [committedValue, courseItems, setStats],
+  );
+
   useEffect(() => {
-    let interval: number;
-    
+    let interval: number | undefined;
+
     if (gameStatus === GameStatus.PLAYING && isFocused) {
-      // Start ticking
       lastTickRef.current = Date.now();
-      
+
       interval = window.setInterval(() => {
         const now = Date.now();
         const delta = now - (lastTickRef.current || now);
         lastTickRef.current = now;
-        
-        setActiveTimeMs(prev => {
+
+        setActiveTimeMs((prev) => {
           const newTime = prev + delta;
           calculateStats(newTime);
           return newTime;
         });
-      }, 100); // Higher precision for smoother WPM updates
+      }, 100);
     } else {
-      // Pause ticking
       lastTickRef.current = null;
     }
-    
-    return () => clearInterval(interval);
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   }, [gameStatus, isFocused, calculateStats]);
 
-  // --- Input Handling ---
+  const processGameLogic = useCallback(
+    (text: string) => {
+      if (gameStatus === GameStatus.IDLE && text.length > 0) {
+        onStart();
+      }
 
-  const processGameLogic = (text: string) => {
-    if (gameStatus === GameStatus.IDLE && text.length > 0) {
-      onStart();
-      // Timer will start in the useEffect because gameStatus becomes PLAYING
-    }
-
-    const charsInPrevPages = courseItems
+      const charsInPrevPages = courseItems
         .slice(0, currentPage * ITEMS_PER_PAGE)
         .reduce((acc, item) => acc + item.hanzi.length, 0);
-    
-    const charsInCurrentPage = currentItems.reduce((acc, item) => acc + item.hanzi.length, 0);
-    const typedInCurrentPage = text.length - charsInPrevPages;
 
-    if (typedInCurrentPage >= charsInCurrentPage) {
+      const charsInCurrentPage = currentItems.reduce((acc, item) => acc + item.hanzi.length, 0);
+      const typedInCurrentPage = text.length - charsInPrevPages;
+
+      if (typedInCurrentPage >= charsInCurrentPage) {
         if (currentPage < totalPages - 1) {
-             setCurrentPage(p => p + 1);
+          setCurrentPage((page) => page + 1);
         } else {
-             const fullTargetText = courseItems.map(item => item.hanzi).join('');
-             if (text.length >= fullTargetText.length) {
-                 const finalStats = calculateStats(activeTimeMs);
-                 if (finalStats) onFinish(finalStats);
-             }
+          const fullTargetText = courseItems.map((item) => item.hanzi).join('');
+          if (text.length >= fullTargetText.length) {
+            const finalStats = calculateStats(activeTimeMs);
+            onFinish(finalStats);
+          }
         }
-    }
-  };
+      }
+    },
+    [activeTimeMs, calculateStats, courseItems, currentItems, currentPage, gameStatus, onFinish, onStart, totalPages],
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (gameStatus === GameStatus.FINISHED) return;
+
     const val = e.target.value;
     setInputValue(val);
+
     if (!isComposing.current) {
-        setCommittedValue(val);
-        processGameLogic(val);
-        e.target.setSelectionRange(val.length, val.length);
+      setCommittedValue(val);
+      processGameLogic(val);
+      e.target.setSelectionRange(val.length, val.length);
     }
   };
 
@@ -166,18 +186,43 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
   const handleCompositionEnd = (e: React.CompositionEvent<HTMLInputElement>) => {
     isComposing.current = false;
     const val = e.currentTarget.value;
-    setInputValue(val); 
+    setInputValue(val);
     setCommittedValue(val);
     processGameLogic(val);
-    (e.target as HTMLInputElement).setSelectionRange(val.length, val.length);
+    e.currentTarget.setSelectionRange(val.length, val.length);
   };
 
-  // --- Rendering ---
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key !== 'Tab') {
+      return;
+    }
+
+    e.preventDefault();
+
+    if (gameStatus === GameStatus.FINISHED) {
+      return;
+    }
+
+    const now = performance.now();
+    if (now - lastTabPressRef.current <= TAB_DOUBLE_PRESS_MS) {
+      lastTabPressRef.current = 0;
+      const note = findPreviousCourseItem(courseItems, committedValue.length);
+      if (note) {
+        onRecordDifficultItem({
+          hanzi: note.hanzi,
+          pinyin: note.pinyin,
+        });
+      }
+      return;
+    }
+
+    lastTabPressRef.current = now;
+  };
 
   const renderContent = () => {
     let globalCharIndexBase = 0;
-    for(let i=0; i<currentPage * ITEMS_PER_PAGE; i++) {
-        globalCharIndexBase += courseItems[i].hanzi.length;
+    for (let i = 0; i < currentPage * ITEMS_PER_PAGE; i++) {
+      globalCharIndexBase += courseItems[i].hanzi.length;
     }
 
     let charOffsetCounter = 0;
@@ -187,39 +232,41 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
         {currentItems.map((item, wordIdx) => {
           const chars = item.hanzi.split('').map((char, charIdxInWord) => {
             const absIndex = globalCharIndexBase + charOffsetCounter;
-            charOffsetCounter++; 
+            charOffsetCounter++;
             const userChar = committedValue[absIndex];
             const isCurrent = absIndex === committedValue.length;
-            let charColor = "text-slate-900"; 
+            let charColor = 'text-slate-900';
+
             if (absIndex < committedValue.length) {
-              if (userChar === char) {
-                charColor = "text-emerald-600 font-medium";
-              } else {
-                charColor = "text-rose-500 font-medium";
-              }
+              charColor = userChar === char ? 'text-emerald-600 font-medium' : 'text-rose-500 font-medium';
             }
+
             return (
-               <div key={charIdxInWord} className="flex flex-col items-center">
-                  <div className={`text-2xl mb-0 leading-none ${absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-700 font-medium'}`}>
-                    {char}
-                  </div>
-                  <div ref={isCurrent ? activeCharRef : null} className={`relative w-6 h-8 flex items-center justify-center text-2xl transition-colors duration-75 ${charColor}`}>
-                    {userChar}
-                    {isCurrent && isFocused && (
-                        <div className="absolute bottom-1 w-5 h-0.5 bg-indigo-500 cursor-blink"></div>
-                    )}
-                  </div>
-               </div>
+              <div key={charIdxInWord} className="flex flex-col items-center">
+                <div
+                  className={`text-2xl mb-0 leading-none ${
+                    absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-700 font-medium'
+                  }`}
+                >
+                  {char}
+                </div>
+                <div
+                  ref={isCurrent ? activeCharRef : null}
+                  className={`relative w-6 h-8 flex items-center justify-center text-2xl transition-colors duration-75 ${charColor}`}
+                >
+                  {userChar}
+                  {isCurrent && isFocused && <div className="absolute bottom-1 w-5 h-0.5 bg-indigo-500 cursor-blink" />}
+                </div>
+              </div>
             );
           });
+
           return (
             <div key={wordIdx} className="flex flex-col items-center px-0.5 rounded hover:bg-slate-50 transition-colors">
-               <div className="text-xs text-indigo-200 font-mono tracking-tight leading-none opacity-80 mb-1">
-                 {item.pinyin}
-               </div>
-               <div className="flex gap-0">
-                 {chars}
-               </div>
+              <div className="text-xs text-indigo-200 font-mono tracking-tight leading-none opacity-80 mb-1">
+                {item.pinyin}
+              </div>
+              <div className="flex gap-0">{chars}</div>
             </div>
           );
         })}
@@ -231,90 +278,93 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
   const currentProgress = Math.min(100, Math.round((committedValue.length / Math.max(1, totalCharsInCourse)) * 100));
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 pb-24">
-      <div className="flex justify-between items-center mb-2 text-xs text-slate-400 font-medium uppercase tracking-wide">
-          <div>PAGE {currentPage + 1} / {totalPages}</div>
-          <div>PROGRESS {currentProgress}%</div>
+    <div className="mx-auto w-full max-w-6xl px-4 pb-24">
+      <div className="mb-2 flex items-center justify-between text-xs font-medium uppercase tracking-wide text-slate-400">
+        <div>
+          PAGE {currentPage + 1} / {totalPages}
+        </div>
+        <div>PROGRESS {currentProgress}%</div>
       </div>
 
-      <div className="relative outline-none cursor-text min-h-[400px]" onClick={handleContainerClick}>
+      <div className="relative min-h-[400px] cursor-text outline-none" onClick={focusInput}>
         {!isFocused && gameStatus !== GameStatus.FINISHED && (
-           <div className="absolute inset-0 z-50 flex items-start justify-center pt-20 bg-white/60 backdrop-blur-[1px]">
-             <div className="flex items-center gap-2 px-5 py-2.5 text-white bg-indigo-600 rounded-full shadow-lg cursor-pointer hover:bg-indigo-700 transition-transform hover:scale-105">
-                <AlertCircle size={18} />
-                <span className="font-medium">点击继续练习</span>
-             </div>
-           </div>
+          <div className="absolute inset-0 z-50 flex items-start justify-center bg-white/60 pt-20 backdrop-blur-[1px]">
+            <div className="flex cursor-pointer items-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-white shadow-lg transition-transform hover:scale-105 hover:bg-indigo-700">
+              <AlertCircle size={18} />
+              <span className="font-medium">点击继续练习</span>
+            </div>
+          </div>
         )}
 
         <input
           ref={inputRef}
           type="text"
           style={{
-             top: inputPos.top,
-             left: inputPos.left,
-             width: '1.5rem', 
-             height: '1.5rem',
-             opacity: 0, 
-             position: 'absolute',
-             padding: 0,
-             margin: 0,
-             border: 'none',
-             pointerEvents: 'none',
-             zIndex: 10
+            top: inputPos.top,
+            left: inputPos.left,
+            width: '1.5rem',
+            height: '1.5rem',
+            opacity: 0,
+            position: 'absolute',
+            padding: 0,
+            margin: 0,
+            border: 'none',
+            pointerEvents: 'none',
+            zIndex: 10,
           }}
           value={inputValue}
-          onChange={handleChange} 
+          onChange={handleChange}
           onCompositionStart={handleCompositionStart}
           onCompositionEnd={handleCompositionEnd}
+          onKeyDown={handleKeyDown}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
-          spellCheck="false"
+          spellCheck={false}
           disabled={gameStatus === GameStatus.FINISHED}
         />
 
         {renderContent()}
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur border-t border-slate-200 p-3 shadow-lg z-40">
-        <div className="max-w-5xl mx-auto flex justify-between items-center">
-            <div className="flex gap-2">
-                <button
-                    onClick={() => {
-                        setCurrentPage(p => Math.max(0, p - 1));
-                        focusInput();
-                    }}
-                    disabled={currentPage === 0}
-                    className="p-2 text-slate-500 hover:text-indigo-600 disabled:opacity-30 hover:bg-indigo-50 rounded-lg transition-colors"
-                >
-                    <ChevronLeft size={24} />
-                </button>
-                <button
-                    onClick={() => {
-                        setCurrentPage(p => Math.min(totalPages - 1, p + 1));
-                        focusInput();
-                    }}
-                    disabled={currentPage === totalPages - 1}
-                    className="p-2 text-slate-500 hover:text-indigo-600 disabled:opacity-30 hover:bg-indigo-50 rounded-lg transition-colors"
-                >
-                    <ChevronRight size={24} />
-                </button>
-            </div>
-
-            <div className="text-sm font-medium text-slate-500">
-                {gameStatus === GameStatus.IDLE ? '开始输入以启动计时' : isFocused ? '练习中...' : '已暂停'}
-            </div>
-
+      <div className="fixed bottom-0 left-0 z-40 w-full border-t border-slate-200 bg-white/90 p-3 shadow-lg backdrop-blur">
+        <div className="mx-auto flex max-w-5xl items-center justify-between">
+          <div className="flex gap-2">
             <button
-            onClick={onRestart}
-            className="flex items-center gap-2 px-4 py-2 text-sm text-slate-700 transition-all bg-white border border-slate-300 rounded-lg hover:bg-slate-50 hover:text-indigo-600 hover:border-indigo-300 shadow-sm"
+              onClick={() => {
+                setCurrentPage((page) => Math.max(0, page - 1));
+                focusInput();
+              }}
+              disabled={currentPage === 0}
+              className="rounded-lg p-2 text-slate-500 transition-colors hover:bg-indigo-50 hover:text-indigo-600 disabled:opacity-30"
             >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={() => {
+                setCurrentPage((page) => Math.min(totalPages - 1, page + 1));
+                focusInput();
+              }}
+              disabled={currentPage === totalPages - 1}
+              className="rounded-lg p-2 text-slate-500 transition-colors hover:bg-indigo-50 hover:text-indigo-600 disabled:opacity-30"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          <div className="text-sm font-medium text-slate-500">
+            {gameStatus === GameStatus.IDLE ? '开始输入以启动计时' : isFocused ? '练习中...' : '已暂停'}
+          </div>
+
+          <button
+            onClick={onRestart}
+            className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition-all hover:border-indigo-300 hover:bg-slate-50 hover:text-indigo-600"
+          >
             <RefreshCcw size={16} />
             <span className="font-medium">重置</span>
-            </button>
+          </button>
         </div>
       </div>
     </div>

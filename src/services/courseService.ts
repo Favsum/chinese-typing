@@ -1,5 +1,22 @@
+import type { Course, CourseItem, CourseManifestItem } from '../types';
 
-import type { Course, CourseItem } from '../types';
+type ManifestEntry =
+  | string
+  | {
+      id?: string;
+      file?: string;
+      label?: string;
+      name?: string;
+    };
+
+const isCourseItem = (item: unknown): item is CourseItem => {
+  if (!item || typeof item !== 'object') {
+    return false;
+  }
+
+  const record = item as Record<string, unknown>;
+  return typeof record.hanzi === 'string' && typeof record.pinyin === 'string';
+};
 
 /**
  * Parses the traditional TXT format:
@@ -9,92 +26,98 @@ export const parseContent = (content: string): CourseItem[] => {
   return content
     .trim()
     .split('\n')
-    .map(line => {
+    .map((line) => {
       const parts = line.includes('\t') ? line.split('\t') : line.split(/\s+/);
       const hanzi = parts[0]?.trim();
       const pinyin = parts[1]?.trim();
-      
+
       if (!hanzi) return null;
-      return { 
-        hanzi: hanzi, 
-        pinyin: pinyin || '' 
+      return {
+        hanzi,
+        pinyin: pinyin || '',
       };
     })
     .filter((item): item is CourseItem => item !== null);
 };
 
-// Initial empty array. Courses will be populated via fetchExternalCourses
-export const COURSES: Course[] = [];
+const parseJsonCourse = (data: unknown): CourseItem[] => {
+  if (Array.isArray(data)) {
+    return data.filter(isCourseItem);
+  }
 
-export const getCourse = (courseId: string): Course | undefined => {
-  return COURSES.find(c => c.id === courseId);
+  if (data && typeof data === 'object') {
+    const record = data as Record<string, unknown>;
+    if (Array.isArray(record.items)) {
+      return record.items.filter(isCourseItem);
+    }
+  }
+
+  return [];
 };
 
-/**
- * Attempts to load a list of courses from a manifest.json file in the courses directory.
- * Supports both .txt (line-based) and .json (structured) files.
- */
-export const fetchExternalCourses = async (): Promise<Course[]> => {
+export const fetchCourseManifest = async (): Promise<CourseManifestItem[]> => {
   try {
     const manifestRes = await fetch('courses/manifest.json');
     if (!manifestRes.ok) return [];
 
-    const fileList: string[] = await manifestRes.json();
-    if (!Array.isArray(fileList)) return [];
+    const manifestData: unknown = await manifestRes.json();
+    if (!Array.isArray(manifestData)) return [];
 
-    const coursePromises = fileList.map(async (filename) => {
-      try {
-        const res = await fetch(`courses/${filename}`);
-        if (!res.ok) return null;
+    return manifestData
+      .map((entry, index) => {
+        let id = '';
+        let explicitLabel = '';
 
-        let items: CourseItem[] = [];
-        let rawContent = "";
-
-        if (filename.endsWith('.json')) {
-          // If JSON, we expect an array of {hanzi: string, pinyin: string}
-          // OR a direct array of objects.
-          const jsonData = await res.json();
-          rawContent = JSON.stringify(jsonData);
-          items = Array.isArray(jsonData) ? jsonData : (jsonData.items || []);
-        } else {
-          // Fallback to traditional TXT parsing
-          rawContent = await res.text();
-          items = parseContent(rawContent);
+        if (typeof entry === 'string') {
+          id = entry;
+        } else if (entry && typeof entry === 'object') {
+          const record = entry as Exclude<ManifestEntry, string>;
+          id = record.id || record.file || '';
+          explicitLabel = record.label || record.name || '';
         }
-        
-        if (items.length === 0) return null;
 
-        let displayName = filename.replace(/\.(txt|json)$/, '');
-        const match = displayName.match(/part_(\d+)/);
-        if (match) {
-            displayName = `练习课程 ${match[1]}`;
-        } else {
-             displayName = displayName.replace(/^output_/, '').replace(/_/g, ' ');
-        }
+        if (!id) return null;
 
         return {
-          id: filename,
-          name: displayName,
-          items,
-          rawContent
-        } as Course;
-      } catch (e) {
-        console.warn(`Failed to load course file: ${filename}`, e);
-        return null;
-      }
-    });
-
-    const results = await Promise.all(coursePromises);
-    const validCourses = results.filter((c): c is Course => c !== null);
-    
-    return validCourses.sort((a, b) => {
-        const numA = parseInt(a.name.replace(/\D/g, '')) || 0;
-        const numB = parseInt(b.name.replace(/\D/g, '')) || 0;
-        return numA - numB;
-    });
-
+          id,
+          index,
+          label: explicitLabel.trim() || `常用词${index + 1}`,
+        };
+      })
+      .filter((item): item is CourseManifestItem => item !== null);
   } catch (error) {
-    console.debug('No external courses manifest found.');
+    console.debug('No external courses manifest found.', error);
     return [];
+  }
+};
+
+export const loadCourseById = async (courseId: string, courseName: string): Promise<Course | null> => {
+  try {
+    const res = await fetch(`courses/${courseId}`);
+    if (!res.ok) return null;
+
+    let items: CourseItem[] = [];
+    let rawContent = '';
+
+    if (courseId.endsWith('.json')) {
+      const jsonData: unknown = await res.json();
+      rawContent = JSON.stringify(jsonData);
+      items = parseJsonCourse(jsonData);
+    } else {
+      rawContent = await res.text();
+      items = parseContent(rawContent);
+    }
+
+    if (items.length === 0) return null;
+
+    return {
+      id: courseId,
+      name: courseName,
+      items,
+      rawContent,
+    };
+  } catch (error) {
+    console.warn(`Failed to load course file: ${courseId}`, error);
+    return null;
   }
 };
