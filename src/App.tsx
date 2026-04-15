@@ -345,7 +345,7 @@ const App: React.FC = () => {
 
       <main className="flex-1 w-full mx-auto flex flex-col pt-24">
         {!isHomeScreen && (
-          <div className="max-w-4xl mx-auto w-full px-4 mb-4">
+          <div className="order-last max-w-4xl mx-auto w-full px-4 mt-4 mb-24">
           <div className="bg-white rounded-lg shadow-sm border border-slate-100 py-2 px-6 flex items-center justify-between">
             <div className="flex flex-col items-center md:items-start">
               <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">速度 (WPM)</span>
