@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { DifficultNote, TypingStats } from '../types';
-import { X, Trophy, Target, Clock, Zap, ArrowRight, RefreshCw, FileText } from 'lucide-react';
+import { X, Trophy, Target, Clock, Zap, ArrowRight, RefreshCw, FileText, Copy, Check } from 'lucide-react';
 import {
   BarChart,
   Bar,
@@ -30,6 +30,7 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
   difficultNotes,
 }) => {
   const [showNotes, setShowNotes] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied'>('idle');
 
   if (!isOpen) return null;
 
@@ -43,17 +44,56 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
   const timeString = minutes > 0 ? `${minutes}分 ${seconds}秒` : `${seconds}秒`;
   const handleCloseResults = () => {
     setShowNotes(false);
+    setCopyStatus('idle');
     onClose();
   };
 
   const handleNextAction = () => {
     setShowNotes(false);
+    setCopyStatus('idle');
     if (hasNextCourse) {
       onNextCourse();
       return;
     }
 
     onClose();
+  };
+
+  const notesText = difficultNotes.map((note) => `${note.hanzi} ${note.pinyin}`).join('\n');
+
+  const handleCloseNotes = () => {
+    setShowNotes(false);
+    setCopyStatus('idle');
+  };
+
+  const handleCopyNotes = async () => {
+    if (!notesText) {
+      return;
+    }
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(notesText);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = notesText;
+        textarea.setAttribute('readonly', 'true');
+        textarea.style.position = 'absolute';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      setCopyStatus('copied');
+      window.setTimeout(() => {
+        setCopyStatus('idle');
+      }, 2000);
+    } catch (error) {
+      console.error('Failed to copy difficult notes:', error);
+      setCopyStatus('idle');
+    }
   };
 
   return (
@@ -163,12 +203,22 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
                 <h3 className="text-lg font-semibold text-slate-900">易错词笔记</h3>
                 <p className="text-sm text-slate-500">双击 Tab 记录当前光标前一个词组</p>
               </div>
-              <button
-                onClick={() => setShowNotes(false)}
-                className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
-              >
-                <X size={18} />
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleCopyNotes}
+                  disabled={difficultNotes.length === 0}
+                  aria-label="Copy difficult notes text"
+                  className="flex items-center justify-center rounded-full border border-slate-200 p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {copyStatus === 'copied' ? <Check size={18} /> : <Copy size={18} />}
+                </button>
+                <button
+                  onClick={handleCloseNotes}
+                  className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                >
+                  <X size={18} />
+                </button>
+              </div>
             </div>
 
             <div className="p-5">
