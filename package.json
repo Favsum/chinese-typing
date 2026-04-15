@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "generate:courses": "node scripts/generate-courses.mjs",
+    "predev": "npm run generate:courses",
     "dev": "vite",
+    "prebuild": "npm run generate:courses",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
