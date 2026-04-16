@@ -173,7 +173,7 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
             className="mb-3 flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-100 py-3 font-medium text-slate-700 transition-colors hover:bg-slate-200"
           >
             <FileText size={18} />
-            <span>易错词笔记</span>
+            <span>查看易错词</span>
           </button>
 
           <button
@@ -198,23 +198,20 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
       {showNotes && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm">
           <div className="w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900">易错词笔记</h3>
-                <p className="text-sm text-slate-500">双击 Tab 记录当前光标前一个词组</p>
-              </div>
+            <div className="flex items-center justify-end border-b border-slate-200 px-5 py-4">
+              
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleCopyNotes}
                   disabled={difficultNotes.length === 0}
                   aria-label="Copy difficult notes text"
-                  className="flex items-center justify-center rounded-full border border-slate-200 p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex items-center justify-center rounded-full border border-slate-200 p-1.5 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {copyStatus === 'copied' ? <Check size={18} /> : <Copy size={18} />}
                 </button>
                 <button
                   onClick={handleCloseNotes}
-                  className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                  className="rounded-full p-1.5 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
                 >
                   <X size={18} />
                 </button>
@@ -235,9 +232,8 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
                 </div>
               ) : (
                 <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-5 py-8 text-center text-slate-500 opacity-70">
-                  <p className="mb-2 text-base font-medium text-slate-600">还没有记录任何易错词</p>
                   <p className="text-sm leading-6">
-                    练习过程中双击 Tab，会记录当前光标前一个完整词组，方便在成绩页集中复盘。
+                    练习过程中双击 Tab，会记录当前光标前一个完整词组。
                   </p>
                 </div>
               )}
