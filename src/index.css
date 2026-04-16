@@ -75,7 +75,11 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
+  border-color: #818cf8;
+}
+button:active {
+  border-color: #818cf8;
 }
 
 @media (prefers-color-scheme: light) {
