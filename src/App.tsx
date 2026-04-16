@@ -396,13 +396,13 @@ const App: React.FC = () => {
             renderHomeScreen()
           ) : currentCourseItems.length > 0 ? (
             <div className="flex flex-col w-full h-full">
-              <div className="mx-auto w-full max-w-6xl px-4 pt-2 pb-4">
+              <div className="mx-auto w-full max-w-6xl pt-2 pb-4">
                 <button
                   onClick={goToCourseSelection}
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-slate-500 hover:text-slate-800 bg-white border border-slate-200 shadow-sm rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all w-fit"
+                  className="inline-flex items-center justify-center gap-1 pl-3 pr-4 py-1.5 text-sm font-medium text-slate-400 bg-[#F8FAFC] rounded-lg w-fit"
                 >
-                  <ChevronLeft size={16} className="-ml-0.5" />
-                  返回
+                  <ChevronLeft size={16} className="translate-y-[-0.5px]" />
+                  <span>返回</span>
                 </button>
               </div>
               <TypingEngine
