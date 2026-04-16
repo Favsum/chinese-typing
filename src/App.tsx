@@ -10,7 +10,7 @@ import {
 import { parseContent, fetchCourseManifest, loadCourseById } from './services/courseService';
 import { TypingEngine } from './components/TypingEngine';
 import { ResultsModal } from './components/ResultsModal';
-import { Keyboard, BookOpen, Upload, Loader2, ChevronLeft, ChevronRight, RefreshCcw } from 'lucide-react';
+import { Keyboard, BookOpen, Upload, Loader2, ChevronLeft } from 'lucide-react';
 
 const createInitialStats = (): TypingStats => ({
   wpm: 0,
@@ -270,15 +270,18 @@ const App: React.FC = () => {
     }
 
     return (
-      <div className="max-w-5xl mx-auto w-full px-4 pb-28">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="max-w-5xl mx-auto w-full px-4 pb-20 mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {courseManifest.map((course) => (
             <button
               key={course.id}
               onClick={() => openCourse(course.id)}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-center shadow-sm transition-colors hover:border-indigo-300 hover:text-indigo-600 hover:bg-slate-50"
+              className="group relative flex items-center justify-center py-5 px-4 bg-white rounded-xl border border-slate-200/80 shadow-[0_2px_8px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_16px_-6px_rgba(79,70,229,0.15)] hover:-translate-y-[1px] hover:border-indigo-300 transition-all duration-300 overflow-hidden text-center"
             >
-              <div className="text-sm font-semibold text-slate-800">{course.label}</div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span className="relative z-10 text-[15px] font-medium text-slate-700 group-hover:text-indigo-600 transition-colors tracking-wide">
+                {course.label}
+              </span>
             </button>
           ))}
         </div>
@@ -291,10 +294,18 @@ const App: React.FC = () => {
       <header className="bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 bg-indigo-600 rounded text-white">
-              <Keyboard size={20} />
+            <div
+              className={`flex items-center gap-2 ${!isHomeScreen ? 'cursor-pointer group' : ''}`}
+              onClick={!isHomeScreen ? goToCourseSelection : undefined}
+              title={!isHomeScreen ? "返回首页" : undefined}
+            >
+              <div className="p-1.5 bg-indigo-600 rounded text-white group-hover:bg-indigo-700 transition-colors">
+                <Keyboard size={20} />
+              </div>
+              <h1 className="text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">
+                汉语打字练习
+              </h1>
             </div>
-            <h1 className="text-lg font-bold text-slate-900">汉语打字练习</h1>
           </div>
 
           <div className="flex items-center gap-2">
@@ -346,37 +357,37 @@ const App: React.FC = () => {
       <main className="flex-1 w-full mx-auto flex flex-col pt-24">
         {!isHomeScreen && (
           <div className="order-last max-w-4xl mx-auto w-full px-4 mt-4 mb-24">
-          <div className="bg-white rounded-lg shadow-sm border border-slate-100 py-2 px-6 flex items-center justify-between">
-            <div className="flex flex-col items-center md:items-start">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">速度 (WPM)</span>
-              <span className="text-xl font-black text-indigo-600 tabular-nums leading-none">{stats.wpm}</span>
+            <div className="bg-white rounded-lg shadow-sm border border-slate-100 py-2 px-6 flex items-center justify-between">
+              <div className="flex flex-col items-center md:items-start">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">速度 (WPM)</span>
+                <span className="text-xl font-black text-indigo-600 tabular-nums leading-none">{stats.wpm}</span>
+              </div>
+
+              <div className="h-8 w-px bg-slate-100"></div>
+
+              <div className="flex flex-col items-center md:items-start">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">准确率</span>
+                <span className={`text-xl font-black tabular-nums leading-none ${stats.accuracy < 90 ? 'text-rose-500' : 'text-emerald-500'}`}>
+                  {stats.accuracy}%
+                </span>
+              </div>
+
+              <div className="h-8 w-px bg-slate-100"></div>
+
+              <div className="flex flex-col items-center md:items-start">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">已输入</span>
+                <span className="text-xl font-black text-slate-700 tabular-nums leading-none">{stats.totalChars}</span>
+              </div>
+
+              <div className="hidden md:block h-8 w-px bg-slate-100"></div>
+
+              <div className="hidden md:flex flex-col text-right">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">用时</span>
+                <span className="text-xl font-bold text-slate-600 tabular-nums leading-none">
+                  {Math.floor(stats.timeElapsed / 60)}:{String(stats.timeElapsed % 60).padStart(2, '0')}
+                </span>
+              </div>
             </div>
-
-            <div className="h-8 w-px bg-slate-100"></div>
-
-            <div className="flex flex-col items-center md:items-start">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">准确率</span>
-              <span className={`text-xl font-black tabular-nums leading-none ${stats.accuracy < 90 ? 'text-rose-500' : 'text-emerald-500'}`}>
-                {stats.accuracy}%
-              </span>
-            </div>
-
-            <div className="h-8 w-px bg-slate-100"></div>
-
-            <div className="flex flex-col items-center md:items-start">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">已输入</span>
-              <span className="text-xl font-black text-slate-700 tabular-nums leading-none">{stats.totalChars}</span>
-            </div>
-
-            <div className="hidden md:block h-8 w-px bg-slate-100"></div>
-
-            <div className="hidden md:flex flex-col text-right">
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">用时</span>
-              <span className="text-xl font-bold text-slate-600 tabular-nums leading-none">
-                {Math.floor(stats.timeElapsed / 60)}:{String(stats.timeElapsed % 60).padStart(2, '0')}
-              </span>
-            </div>
-          </div>
           </div>
         )}
 
@@ -384,16 +395,27 @@ const App: React.FC = () => {
           {isHomeScreen ? (
             renderHomeScreen()
           ) : currentCourseItems.length > 0 ? (
-            <TypingEngine
-              key={`${selectedCourseId}-${resetCount}`}
-              courseItems={currentCourseItems}
-              gameStatus={gameStatus}
-              onStart={handleStart}
-              onFinish={handleFinish}
-              onRestart={handleRestart}
-              setStats={setStats}
-              onRecordDifficultItem={handleRecordDifficultItem}
-            />
+            <div className="flex flex-col w-full h-full">
+              <div className="mx-auto w-full max-w-6xl px-4 pt-2 pb-4">
+                <button
+                  onClick={goToCourseSelection}
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-slate-500 hover:text-slate-800 bg-white border border-slate-200 shadow-sm rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all w-fit"
+                >
+                  <ChevronLeft size={16} className="-ml-0.5" />
+                  返回
+                </button>
+              </div>
+              <TypingEngine
+                key={`${selectedCourseId}-${resetCount}`}
+                courseItems={currentCourseItems}
+                gameStatus={gameStatus}
+                onStart={handleStart}
+                onFinish={handleFinish}
+                onRestart={handleRestart}
+                setStats={setStats}
+                onRecordDifficultItem={handleRecordDifficultItem}
+              />
+            </div>
           ) : (
             <div className="flex items-center justify-center h-64 text-slate-400">
               {isCourseLoading ? '加载中...' : '请选择一个课程开始练习'}
@@ -402,36 +424,7 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      {isHomeScreen && (
-        <div className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur border-t border-slate-200 p-3 shadow-lg z-40">
-          <div className="max-w-5xl mx-auto flex justify-between items-center">
-            <div className="flex gap-2">
-              <button
-                disabled
-                className="p-2 text-slate-500 rounded-lg opacity-30"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                disabled
-                className="p-2 text-slate-500 rounded-lg opacity-30"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
 
-            <div className="text-sm font-medium text-slate-500">选择章节开始练习</div>
-
-            <button
-              disabled
-              className="flex items-center gap-2 px-4 py-2 text-sm text-slate-700 bg-white border border-slate-300 rounded-lg shadow-sm opacity-40"
-            >
-              <RefreshCcw size={16} />
-              <span className="font-medium">重置</span>
-            </button>
-          </div>
-        </div>
-      )}
 
       <ResultsModal
         isOpen={showResults}
