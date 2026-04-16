@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 public/courses/
-.codex
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +23,4 @@ public/courses/
 *.njsproj
 *.sln
 *.sw?
+.codex
