@@ -244,9 +244,8 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
             return (
               <div key={charIdxInWord} className="flex flex-col items-center">
                 <div
-                  className={`text-2xl mb-0 leading-none ${
-                    absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-700 font-medium'
-                  }`}
+                  className={`text-2xl mb-0 leading-none ${absIndex < committedValue.length ? 'text-slate-400' : 'text-slate-700 font-medium'
+                    }`}
                 >
                   {char}
                 </div>
@@ -363,7 +362,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
             className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition-all hover:border-indigo-300 hover:bg-slate-50 hover:text-indigo-600"
           >
             <RefreshCcw size={16} />
-            <span className="font-medium">重置</span>
+            <span className="font-medium">重新开始</span>
           </button>
         </div>
       </div>
