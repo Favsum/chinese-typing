@@ -10,7 +10,7 @@ import {
 import { parseContent, fetchCourseManifest, loadCourseById } from './services/courseService';
 import { TypingEngine } from './components/TypingEngine';
 import { ResultsModal } from './components/ResultsModal';
-import { Keyboard, BookOpen, Upload, Loader2, ChevronLeft } from 'lucide-react';
+import { Keyboard, BookOpen, Upload, Loader2, ChevronLeft, Settings, X } from 'lucide-react';
 
 const createInitialStats = (): TypingStats => ({
   wpm: 0,
@@ -24,7 +24,9 @@ const createInitialStats = (): TypingStats => ({
 const App: React.FC = () => {
   const [gameStatus, setGameStatus] = useState<GameStatus>(GameStatus.IDLE);
   const [currentCourseItems, setCurrentCourseItems] = useState<CourseItem[]>([]);
-  const [selectedCourseId, setSelectedCourseId] = useState('');
+  const [selectedCourseId, setSelectedCourseId] = useState(() => {
+    return localStorage.getItem('chinese_typing_selected_course') || '';
+  });
   const [resetCount, setResetCount] = useState(0);
   const [isManifestLoading, setIsManifestLoading] = useState(true);
   const [isCourseLoading, setIsCourseLoading] = useState(false);
@@ -34,11 +36,36 @@ const App: React.FC = () => {
   const [showResults, setShowResults] = useState(false);
   const [difficultNotes, setDifficultNotes] = useState<DifficultNote[]>([]);
 
+  // 设置相关状态
+  const [showPinyin, setShowPinyin] = useState(() => {
+    const saved = localStorage.getItem('chinese_typing_show_pinyin');
+    return saved !== null ? saved === 'true' : true;
+  });
+  const [pinyinSize, setPinyinSize] = useState(() => {
+    const saved = localStorage.getItem('chinese_typing_pinyin_size');
+    return saved ? parseInt(saved, 10) : 14;
+  });
+  const [pinyinOpacity, setPinyinOpacity] = useState(() => {
+    const saved = localStorage.getItem('chinese_typing_pinyin_opacity');
+    return saved ? parseInt(saved, 10) : 0;
+  });
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
   const fileInputRef = useRef<HTMLInputElement>(null);
   const courseCacheRef = useRef<Map<string, Course>>(new Map());
 
   const manifestById = useMemo(() => new Map(courseManifest.map((course) => [course.id, course])), [courseManifest]);
   const customCoursesById = useMemo(() => new Map(customCourses.map((course) => [course.id, course])), [customCourses]);
+
+  useEffect(() => {
+    localStorage.setItem('chinese_typing_selected_course', selectedCourseId);
+  }, [selectedCourseId]);
+
+  useEffect(() => {
+    localStorage.setItem('chinese_typing_show_pinyin', String(showPinyin));
+    localStorage.setItem('chinese_typing_pinyin_size', String(pinyinSize));
+    localStorage.setItem('chinese_typing_pinyin_opacity', String(pinyinOpacity));
+  }, [showPinyin, pinyinSize, pinyinOpacity]);
 
   const selectOptions = useMemo(() => {
     const manifestOptions = courseManifest.map((course) => ({
@@ -303,12 +330,19 @@ const App: React.FC = () => {
                 <Keyboard size={20} />
               </div>
               <h1 className="text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">
-                汉语打字练习
+                中文打字练习
               </h1>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsSettingsOpen(true)}
+              className="p-1.5 bg-white text-slate-400 hover:bg-indigo-600 hover:text-white rounded-lg transition-colors"
+              title="显示设置"
+            >
+              <Settings size={18} />
+            </button>
             <div className="flex items-center gap-2 bg-slate-100 rounded-lg px-3 py-1.5">
               <BookOpen size={16} className="text-slate-500" />
               {isManifestLoading ? (
@@ -355,41 +389,7 @@ const App: React.FC = () => {
       </header>
 
       <main className="flex-1 w-full mx-auto flex flex-col pt-24">
-        {!isHomeScreen && (
-          <div className="order-last max-w-4xl mx-auto w-full px-4 mt-4 mb-24">
-            <div className="bg-white rounded-lg shadow-sm border border-slate-100 py-2 px-6 flex items-center justify-between">
-              <div className="flex flex-col items-center md:items-start">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">速度 (WPM)</span>
-                <span className="text-xl font-black text-indigo-600 tabular-nums leading-none">{stats.wpm}</span>
-              </div>
 
-              <div className="h-8 w-px bg-slate-100"></div>
-
-              <div className="flex flex-col items-center md:items-start">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">准确率</span>
-                <span className={`text-xl font-black tabular-nums leading-none ${stats.accuracy < 90 ? 'text-rose-500' : 'text-emerald-500'}`}>
-                  {stats.accuracy}%
-                </span>
-              </div>
-
-              <div className="h-8 w-px bg-slate-100"></div>
-
-              <div className="flex flex-col items-center md:items-start">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">已输入</span>
-                <span className="text-xl font-black text-slate-700 tabular-nums leading-none">{stats.totalChars}</span>
-              </div>
-
-              <div className="hidden md:block h-8 w-px bg-slate-100"></div>
-
-              <div className="hidden md:flex flex-col text-right">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">用时</span>
-                <span className="text-xl font-bold text-slate-600 tabular-nums leading-none">
-                  {Math.floor(stats.timeElapsed / 60)}:{String(stats.timeElapsed % 60).padStart(2, '0')}
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
 
         <div className="flex-1">
           {isHomeScreen ? (
@@ -409,11 +409,15 @@ const App: React.FC = () => {
                 key={`${selectedCourseId}-${resetCount}`}
                 courseItems={currentCourseItems}
                 gameStatus={gameStatus}
+                stats={stats}
                 onStart={handleStart}
                 onFinish={handleFinish}
                 onRestart={handleRestart}
                 setStats={setStats}
                 onRecordDifficultItem={handleRecordDifficultItem}
+                showPinyin={showPinyin}
+                pinyinSize={pinyinSize}
+                pinyinOpacity={pinyinOpacity}
               />
             </div>
           ) : (
@@ -434,6 +438,63 @@ const App: React.FC = () => {
         onNextCourse={handleNextCourse}
         difficultNotes={difficultNotes}
       />
+
+      {isSettingsOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/20 backdrop-blur-sm">
+          <div className="bg-white rounded-xl shadow-xl w-80 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            <div className="flex justify-between items-center p-4 border-b border-slate-100">
+              <h3 className="font-bold text-slate-800">显示设置</h3>
+              <button
+                onClick={() => setIsSettingsOpen(false)}
+                className="text-slate-400 hover:text-slate-600 transition-colors p-1 bg-white hover:bg-white border-none"
+              >
+                <X size={18} />
+              </button>
+            </div>
+            <div className="p-5 space-y-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-slate-700">显示拼音</span>
+                <button
+                  onClick={() => setShowPinyin(!showPinyin)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors p-0 border-none focus:ring-0 ${showPinyin ? 'bg-indigo-500' : 'bg-slate-200'}`}
+                >
+                  <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-sm transition-transform ${showPinyin ? 'translate-x-6' : 'translate-x-1'}`} />
+                </button>
+              </div>
+              <div className={`space-y-2 transition-opacity ${!showPinyin ? 'opacity-50' : ''}`}>
+                <div className="flex justify-between">
+                  <span className="text-sm font-medium text-slate-700">拼音大小</span>
+                  <span className="text-xs text-slate-500 font-mono">{pinyinSize}px</span>
+                </div>
+                <input
+                  type="range"
+                  min="8"
+                  max="24"
+                  value={pinyinSize}
+                  onChange={(e) => setPinyinSize(Number(e.target.value))}
+                  className="w-full accent-indigo-500"
+                  disabled={!showPinyin}
+                />
+              </div>
+              <div className={`space-y-2 transition-opacity ${!showPinyin ? 'opacity-50' : ''}`}>
+                <div className="flex justify-between">
+                  <span className="text-sm font-medium text-slate-700">拼音显示淡化</span>
+                  <span className="text-xs text-slate-500 font-mono">{pinyinOpacity}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={pinyinOpacity}
+                  onChange={(e) => setPinyinOpacity(Number(e.target.value))}
+                  className="w-full accent-indigo-500"
+                  disabled={!showPinyin}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

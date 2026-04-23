@@ -5,11 +5,15 @@ import { RefreshCcw, AlertCircle, ChevronRight, ChevronLeft } from 'lucide-react
 interface TypingEngineProps {
   courseItems: CourseItem[];
   gameStatus: GameStatus;
+  stats: TypingStats;
   onStart: () => void;
   onFinish: (stats: TypingStats) => void;
   onRestart: () => void;
   setStats: (stats: TypingStats) => void;
   onRecordDifficultItem: (note: DifficultNote) => void;
+  showPinyin: boolean;
+  pinyinSize: number;
+  pinyinOpacity: number;
 }
 
 const ITEMS_PER_PAGE = 68;
@@ -39,11 +43,15 @@ const findPreviousCourseItem = (courseItems: CourseItem[], cursorPosition: numbe
 export const TypingEngine: React.FC<TypingEngineProps> = ({
   courseItems,
   gameStatus,
+  stats,
   onStart,
   onFinish,
   onRestart,
   setStats,
   onRecordDifficultItem,
+  showPinyin,
+  pinyinSize,
+  pinyinOpacity,
 }) => {
   const [inputValue, setInputValue] = useState('');
   const [committedValue, setCommittedValue] = useState('');
@@ -262,9 +270,17 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
           return (
             <div key={wordIdx} className="flex flex-col items-center px-0.5 rounded hover:bg-slate-50 transition-colors">
-              <div className="text-xs text-indigo-200 font-mono tracking-tight leading-none opacity-80 mb-1">
-                {item.pinyin}
-              </div>
+              {showPinyin && (
+                <div
+                  className="text-indigo-400 font-mono tracking-tight leading-none mb-1 transition-all"
+                  style={{
+                    fontSize: `${pinyinSize}px`,
+                    opacity: 1 - (pinyinOpacity / 100),
+                  }}
+                >
+                  {item.pinyin}
+                </div>
+              )}
               <div className="flex gap-0">{chars}</div>
             </div>
           );
@@ -278,13 +294,6 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 pb-24">
-      <div className="mb-2 flex items-center justify-between text-xs font-medium uppercase tracking-wide text-slate-400">
-        <div>
-          PAGE {currentPage + 1} / {totalPages}
-        </div>
-        <div>PROGRESS {currentProgress}%</div>
-      </div>
-
       <div className="relative min-h-[400px] cursor-text outline-none" onClick={focusInput}>
         {!isFocused && gameStatus !== GameStatus.FINISHED && (
           <div className="absolute inset-0 z-50 flex items-start justify-center bg-white/60 pt-20 backdrop-blur-[1px]">
@@ -330,38 +339,66 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
       <div className="fixed bottom-0 left-0 z-40 w-full border-t border-slate-200 bg-white/90 p-3 shadow-lg backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between">
-          <div className="flex gap-2">
+          <div className="flex items-center gap-1">
             <button
               onClick={() => {
                 setCurrentPage((page) => Math.max(0, page - 1));
                 focusInput();
               }}
               disabled={currentPage === 0}
-              className="rounded-lg p-2 text-slate-500 transition-colors hover:bg-indigo-50 hover:text-indigo-600 disabled:opacity-30"
+              className="bg-transparent border-none rounded-lg p-1.5 text-slate-500 transition-colors hover:bg-indigo-50 hover:text-indigo-600 disabled:opacity-30"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={20} />
             </button>
+            <div className="flex items-center justify-center min-w-[3rem] text-sm font-medium text-slate-600 select-none">
+              {currentPage + 1} / {totalPages}
+            </div>
             <button
               onClick={() => {
                 setCurrentPage((page) => Math.min(totalPages - 1, page + 1));
                 focusInput();
               }}
               disabled={currentPage === totalPages - 1}
-              className="rounded-lg p-2 text-slate-500 transition-colors hover:bg-indigo-50 hover:text-indigo-600 disabled:opacity-30"
+              className="bg-transparent border-none rounded-lg p-1.5 text-slate-500 transition-colors hover:bg-indigo-50 hover:text-indigo-600 disabled:opacity-30"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={20} />
             </button>
           </div>
 
-          <div className="text-sm font-medium text-slate-500">
-            {gameStatus === GameStatus.IDLE ? '开始输入以启动计时' : isFocused ? '练习中...' : '已暂停'}
+          <div className="flex items-center gap-6 text-sm">
+            {gameStatus === GameStatus.IDLE ? (
+              <span className="text-slate-500 font-medium select-none">开始输入以启动计时</span>
+            ) : (
+              <>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-slate-400">速度</span>
+                  <span className="font-bold text-indigo-600 w-6 tabular-nums text-right">{stats.wpm}</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-slate-400">准确率</span>
+                  <span className={`font-bold w-10 tabular-nums text-right ${stats.accuracy < 90 ? 'text-rose-500' : 'text-emerald-500'}`}>
+                    {stats.accuracy}%
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-slate-400">进度</span>
+                  <span className="font-bold text-slate-600 w-10 tabular-nums text-right">{currentProgress}%</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-slate-400">用时</span>
+                  <span className="font-bold text-slate-600 w-10 tabular-nums text-right">
+                    {Math.floor(stats.timeElapsed / 60)}:{String(stats.timeElapsed % 60).padStart(2, '0')}
+                  </span>
+                </div>
+              </>
+            )}
           </div>
 
           <button
             onClick={onRestart}
-            className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm transition-all hover:border-indigo-300 hover:bg-slate-50 hover:text-indigo-600"
+            className="flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm text-slate-700 shadow-sm transition-all hover:border-indigo-300 hover:bg-slate-50 hover:text-indigo-600"
           >
-            <RefreshCcw size={16} />
+            <RefreshCcw size={14} />
             <span className="font-medium">重新开始</span>
           </button>
         </div>
