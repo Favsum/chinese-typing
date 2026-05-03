@@ -2,7 +2,7 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const CSV_URL =
-  'https://raw.githubusercontent.com/Favsum/chinese-words/refs/heads/main/%E7%8E%B0%E4%BB%A3%E6%B1%89%E8%AF%AD%E5%B8%B8%E7%94%A8%E8%AF%8D%E8%A1%A8%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.csv';
+  'https://raw.githubusercontent.com/ProMax-Ultra/chinese-words/refs/heads/main/%E7%8E%B0%E4%BB%A3%E6%B1%89%E8%AF%AD%E5%B8%B8%E7%94%A8%E8%AF%8D%E8%A1%A8%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.csv';
 const OUTPUT_DIR = path.resolve(process.cwd(), 'public', 'courses');
 const PART_SIZE = 250;
 const REQUIRED_HEADERS = ['词语', '拼音', '频序号'];

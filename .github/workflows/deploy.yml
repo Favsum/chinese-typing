@@ -31,7 +31,7 @@ jobs:
         with:
           script: |
             const { data } = await github.rest.repos.getContent({
-              owner: 'Favsum',
+              owner: 'ProMax-Ultra',
               repo: 'chinese-words',
               path: '现代汉语常用词表（第2版）.csv',
               ref: 'main',
